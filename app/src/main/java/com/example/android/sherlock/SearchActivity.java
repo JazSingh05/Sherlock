@@ -25,8 +25,9 @@ public class SearchActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.editText);
         if(!editText.getText().toString().matches("") || editText.getText().toString().matches("")) {
             String DatabaseSearch = editText.getText().toString();
-            //Intent intent = new Intent(this, SherlockDatabase.class);
-            //intent.putExtra("sherlock.com.sherlock", DatabaseSearch);
+            Intent intent = new Intent(this, DatabaseResult.class);
+            startActivity(intent);
+            intent.putExtra("sherlock.com.sherlock", DatabaseSearch);
         }
         else
         {

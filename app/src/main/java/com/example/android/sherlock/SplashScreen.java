@@ -9,11 +9,12 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
-import com.example.android.sherlock.MainActivity;
-import com.example.android.sherlock.R;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SplashScreen extends AppCompatActivity {
     //This is how you bind a view in XML to a global var in the class
+    @BindView(R.id.logo)
     ImageView splashImage;
 
     private RotateAnimation rotate;
@@ -22,24 +23,24 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        /*rotate = new RotateAnimation(0, 1440, Animation.RELATIVE_TO_SELF, .5f, Animation.RELATIVE_TO_SELF, .5f);
+        rotate = new RotateAnimation(0, 1440, Animation.RELATIVE_TO_SELF, .5f, Animation.RELATIVE_TO_SELF, .5f);
         rotate.setDuration(1500);
         rotate.setInterpolator(new AccelerateDecelerateInterpolator());
         rotate.setRepeatMode(Animation.RESTART);
         rotate.setRepeatCount(Animation.INFINITE);
-    */}
+    }
 
     @Override
     protected void onStart() {
         super.onStart();
         //make sure you alwasy call this function in onStart, not before, not after
-
+        ButterKnife.bind(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-       // splashImage.startAnimation(rotate);
+        splashImage.startAnimation(rotate);
     }
 
 

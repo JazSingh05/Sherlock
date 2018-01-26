@@ -10,10 +10,16 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/splash_image"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/splash_image"
-        android:layout_marginBottom="75dp"
+        android:layout_centerHorizontal="true"
         android:onClick="mainScreen"
         android:text="Main Screen" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/p" />
 </RelativeLayout>

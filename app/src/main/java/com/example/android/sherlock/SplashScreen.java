@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
+//testing travis
 public class SplashScreen extends AppCompatActivity {
     //This is how you bind a view in XML to a global var in the class
     @BindView(R.id.logo)
@@ -41,22 +43,6 @@ public class SplashScreen extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         splashImage.startAnimation(rotate);
-    }
-
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 
     public void mainScreen(View view){

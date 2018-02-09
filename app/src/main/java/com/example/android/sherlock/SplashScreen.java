@@ -13,7 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-//testing travis
+//lets go travis
 public class SplashScreen extends AppCompatActivity {
     //This is how you bind a view in XML to a global var in the class
     @BindView(R.id.logo)

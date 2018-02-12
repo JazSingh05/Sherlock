@@ -30,9 +30,6 @@ public class SplashScreen extends AppCompatActivity {
         rotate.setInterpolator(new AccelerateDecelerateInterpolator());
         rotate.setRepeatMode(Animation.RESTART);
         rotate.setRepeatCount(Animation.INFINITE);
-        //adding this line to test travis CI
-        rotate.setFillAfter(true);
-
     }
 
     @Override

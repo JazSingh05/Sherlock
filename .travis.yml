@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: owl-93-github
     token:
-      secure: 052f37aa4c1ad2f8fcea8fe0d1d513667440e55b
+      secure: mW2tB2FMCGJjw3hpzv3P
 jdk:
   - oraclejdk8
 script:

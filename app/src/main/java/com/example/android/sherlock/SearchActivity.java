@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -22,17 +23,30 @@ public class SearchActivity extends AppCompatActivity {
 
     public void searchDatabase(View view)
     {
+
+        Database db = new Database(this);
+        Store mystore = new Store("2", "Ralphs", "123 Fake St", "apple", "1.99");
+        db.addStore(mystore);
+
         EditText editText = (EditText) findViewById(R.id.editText);
         if(!editText.getText().toString().matches("") || editText.getText().toString().matches("")) {
             String DatabaseSearch = editText.getText().toString();
+            Log.d("CHECKING STRING", "THe string you entered: " + DatabaseSearch);
             Intent intent = new Intent(this, DatabaseResult.class);
-            startActivity(intent);
             intent.putExtra("sherlock.com.sherlock", DatabaseSearch);
+            startActivity(intent);
+
         }
         else
         {
             Toast.makeText(this, "Enter in Something", Toast.LENGTH_SHORT).show();
         }
+
+
+
+
+
+
     }
 
 

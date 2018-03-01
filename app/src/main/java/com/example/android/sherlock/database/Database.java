@@ -17,7 +17,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by Abbinav, Jaz on 1/28/2018.
+ * Created by Abbinav, Jaz on 1/28/2018. Rebuilt by Stephen on 2/28/2018
  */
 
 public class Database extends SQLiteOpenHelper {
@@ -74,6 +74,7 @@ public class Database extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_ITEMS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_STORES);
         onCreate(sqLiteDatabase);
     }
 

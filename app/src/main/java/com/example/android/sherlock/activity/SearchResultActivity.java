@@ -1,4 +1,4 @@
-package com.example.android.sherlock.database;
+package com.example.android.sherlock.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.android.sherlock.database.Database;
 import com.example.android.sherlock.model.Item;
 import com.example.android.sherlock.R;
 
@@ -16,7 +17,7 @@ import java.util.List;
  * Created by abbin_j19pde on 1/24/2018.
  */
 
-public class DatabaseResult extends AppCompatActivity {
+public class SearchResultActivity extends AppCompatActivity {
 
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.android.sherlock.R;
-import com.example.android.sherlock.database.DatabaseResult;
 
 /**
  * Created by abbin_j19pde on 1/24/2018.
@@ -31,7 +30,7 @@ public class SearchActivity extends AppCompatActivity {
         if(!editText.getText().toString().matches("") || editText.getText().toString().matches("")) {
             String DatabaseSearch = editText.getText().toString();
             Log.d("CHECKING STRING", "The string you entered: " + DatabaseSearch);
-            Intent intent = new Intent(this, DatabaseResult.class);
+            Intent intent = new Intent(this, SearchResultActivity.class);
             intent.putExtra("SEARCH_TERM", DatabaseSearch);
             startActivity(intent);
 

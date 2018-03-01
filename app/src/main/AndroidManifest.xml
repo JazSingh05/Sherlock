@@ -19,7 +19,7 @@
         </activity>
 
         <activity android:name=".activity.SearchActivity" />
-        <activity android:name=".database.DatabaseResult" />
+        <activity android:name=".activity.SearchResultActivity" />
         <activity android:name=".activity.Settings"></activity>
 
 

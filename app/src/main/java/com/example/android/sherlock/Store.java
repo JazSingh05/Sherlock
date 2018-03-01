@@ -10,10 +10,17 @@ public class Store {
 
     private int id;
     private String storeName;
-    private int productId;
+    private String address;
     private String productName;
     private Bitmap productPicture;
     private Double price;
+
+    public Store(String s, String ralphs, String s1, String banana, String s3) {
+    }
+
+    public Store() {
+
+    }
 
     public int getId() {
         return id;
@@ -31,12 +38,12 @@ public class Store {
         this.storeName = storeName;
     }
 
-    public int getProductId() {
-        return productId;
+    public String getAddress() {
+        return address;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getProductName() {

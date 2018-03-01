@@ -1,4 +1,4 @@
-package com.example.android.sherlock;
+package com.example.android.sherlock.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,9 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
+
+import com.example.android.sherlock.R;
+import com.example.android.sherlock.database.Database;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

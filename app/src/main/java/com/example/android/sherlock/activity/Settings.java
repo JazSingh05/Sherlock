@@ -1,9 +1,11 @@
-package com.example.android.sherlock;
+package com.example.android.sherlock.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.android.sherlock.R;
 
 public class Settings extends AppCompatActivity {
 

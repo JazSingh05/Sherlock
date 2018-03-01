@@ -50,21 +50,31 @@ public class Database extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public void addStore(Store store){
+    public void addTestData() {
+        Log.d("DATABASE", "adding test data to the database");
+        for(int i=0; i< 10; i++) {
+            ContentValues values = new ContentValues();
+            values.put(ID, i);
+            values.put(NAME, "Costco" + i);
+            values.put(ADDRESS, i + " Fake Street");
+            values.put(PRODUCTNAME, "apple" + i);
+            values.put(PRICE, i+".99");
+            addStore(values);
+        }
+    }
 
+    public void addStore(ContentValues data){
         SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-
-        values.put(ID, "7");
-        values.put(NAME, "Costco");
-        values.put(ADDRESS, "123 Fake Street");
-        values.put(PRODUCTNAME, "apple");
-        values.put(PRICE, "1.99");
-
-        long result = db.insert(TABLE_ITEMS, null, values);
+        long result = db.insert(TABLE_ITEMS, null, data);
         Log.d("STORAGE_CHECK", "insertdata: Added " +   " to " + "\nResult = " + result);
         db.close();
+    }
+
+    public boolean hasData() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] projection = {ID, NAME, ADDRESS, PRODUCTNAME, PRICE};
+        Cursor cursor = db.query(TABLE_ITEMS, projection, null, null, null, null, null);
+        return cursor.getCount() > 0;
     }
 
     public ArrayList<String> searchQuery(String s)

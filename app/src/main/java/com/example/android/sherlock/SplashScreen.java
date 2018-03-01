@@ -3,6 +3,7 @@ package com.example.android.sherlock;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
@@ -16,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
     //This is how you bind a view in XML to a global var in the class
     @BindView(R.id.logo)
     ImageView splashImage;
-
+    Database db;
     private RotateAnimation rotate;
     //These methods should be implemented or at least stubbed out and call super in every activity
     @Override
@@ -28,6 +29,12 @@ public class SplashScreen extends AppCompatActivity {
         rotate.setInterpolator(new AccelerateDecelerateInterpolator());
         rotate.setRepeatMode(Animation.RESTART);
         rotate.setRepeatCount(Animation.INFINITE);
+        this.db = new Database(this);
+        if(!db.hasData()){
+            db.addTestData();
+        }else {
+            Log.d("SPLASH", "data detected, not adding test data");
+        }
     }
 
     @Override

@@ -24,9 +24,7 @@ public class SearchActivity extends AppCompatActivity {
     public void searchDatabase(View view)
     {
 
-        Database db = new Database(this);
-        Store mystore = new Store("2", "Ralphs", "123 Fake St", "apple", "1.99");
-        db.addStore(mystore);
+
 
         EditText editText = (EditText) findViewById(R.id.editText);
         if(!editText.getText().toString().matches("") || editText.getText().toString().matches("")) {

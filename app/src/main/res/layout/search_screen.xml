@@ -3,18 +3,24 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#eeeeee"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#dddddd"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
+        android:textAlignment="center"
         android:ems="10"
         android:fontFamily="casual"
-        android:hint="Enter your item"
+        android:textAllCaps="true"
+        android:hint="@string/search_hint"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/search_bar_bg"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="82dp" />
@@ -23,9 +29,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="151dp"
         android:onClick="searchDatabase"
-        android:text="Search" />
+        android:background="#00000000"
+        android:textColor="@color/colorAccent"
+        android:text="@string/search_go" />
 </RelativeLayout>

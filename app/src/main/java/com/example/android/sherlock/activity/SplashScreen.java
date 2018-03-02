@@ -83,7 +83,7 @@ public class SplashScreen extends AppCompatActivity {
         scaleIn.setFillAfter(true);
         scaleIn.setAnimationListener(logoAppearListener);
         //rotate animation
-        rotate = new RotateAnimation(0, 720, Animation.RELATIVE_TO_SELF, .5f, Animation.RELATIVE_TO_SELF, .5f);
+        rotate = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, .5f, Animation.RELATIVE_TO_SELF, .5f);
         rotate.setDuration(500);
         rotate.setInterpolator(new AccelerateDecelerateInterpolator());
         rotate.setRepeatMode(Animation.RESTART);

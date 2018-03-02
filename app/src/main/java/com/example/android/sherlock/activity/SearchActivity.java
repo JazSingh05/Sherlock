@@ -7,15 +7,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.sherlock.R;
+
+import org.w3c.dom.Text;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by abbin_j19pde on 1/24/2018.
  */
 
 public class SearchActivity extends AppCompatActivity {
+    @BindView(R.id.searchBar)
+    TextView searchBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,12 +31,16 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.search_screen);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ButterKnife.bind(this);
+    }
     public void searchDatabase(View view)
     {
-
-        EditText editText = (EditText) findViewById(R.id.editText);
-        if(!editText.getText().toString().matches("") || editText.getText().toString().matches("")) {
-            String DatabaseSearch = editText.getText().toString();
+        
+        if(!searchBar.getText().toString().matches("") || searchBar.getText().toString().matches("")) {
+            String DatabaseSearch = searchBar.getText().toString();
             Log.d("CHECKING STRING", "The string you entered: " + DatabaseSearch);
             Intent intent = new Intent(this, SearchResultActivity.class);
             intent.putExtra("SEARCH_TERM", DatabaseSearch);

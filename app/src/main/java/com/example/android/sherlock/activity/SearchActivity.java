@@ -59,6 +59,11 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
+    public void settingsMainShow(View view){
+        Intent intent = new Intent(this, Settings.class);
+        startActivity(intent);
+    }
+
 
 
 }

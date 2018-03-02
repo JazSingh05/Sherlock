@@ -38,4 +38,17 @@
         android:background="#00000000"
         android:textColor="@color/colorAccent"
         android:text="@string/search_go" />
+
+    <Button
+        android:id="@+id/SettingsBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="32dp"
+        android:background="#00000000"
+        android:onClick="settingsMainShow"
+        android:text="@string/search_settings"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
 </RelativeLayout>

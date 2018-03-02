@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/BackButton"
         android:layout_width="60dp"
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
@@ -13,30 +13,30 @@
         android:text="Back" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/toggleNotifications"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/button3"
+        android:layout_below="@+id/BackButton"
         android:layout_marginEnd="59dp"
         android:layout_marginTop="26dp"
         android:text="ToggleButton" />
 
     <ToggleButton
-        android:id="@+id/toggleButton2"
+        android:id="@+id/togglelocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/toggleButton"
-        android:layout_below="@+id/toggleButton"
+        android:layout_alignStart="@+id/toggleNotifications"
+        android:layout_below="@+id/toggleNotifications"
         android:layout_marginTop="45dp"
         android:text="ToggleButton" />
 
     <ToggleButton
-        android:id="@+id/toggleButton3"
+        android:id="@+id/toggledistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/toggleButton2"
-        android:layout_below="@+id/toggleButton2"
+        android:layout_alignStart="@+id/togglelocation"
+        android:layout_below="@+id/togglelocation"
         android:layout_marginTop="46dp"
         android:text="ToggleButton" />
 
@@ -44,9 +44,9 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/toggleButton"
-        android:layout_alignBottom="@+id/toggleButton"
-        android:layout_toEndOf="@+id/button3"
+        android:layout_alignBaseline="@+id/toggleNotifications"
+        android:layout_alignBottom="@+id/toggleNotifications"
+        android:layout_toEndOf="@+id/BackButton"
         android:text="Notifications"
         android:textSize="18sp" />
 
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView"
-        android:layout_alignTop="@+id/toggleButton2"
+        android:layout_alignTop="@+id/togglelocation"
         android:layout_marginTop="11dp"
         android:text="Location"
         android:textSize="18sp" />
@@ -64,8 +64,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/toggleButton3"
-        android:layout_alignBottom="@+id/toggleButton3"
+        android:layout_alignBaseline="@+id/toggledistance"
+        android:layout_alignBottom="@+id/toggledistance"
         android:layout_alignStart="@+id/textView2"
         android:text="Factor Distance"
         android:textSize="18sp" />
@@ -74,7 +74,7 @@
         android:id="@+id/seekBar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toggleButton3"
+        android:layout_below="@+id/toggledistance"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="88dp" />
 
@@ -89,7 +89,7 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/SaveSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -20,7 +20,7 @@
 
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.SearchResultActivity" />
-        <activity android:name=".activity.Settings"></activity>
+        <activity android:name=".activity.Settings"/>
 
 
     </application>

@@ -9,6 +9,8 @@ import com.example.android.sherlock.R;
 
 public class Settings extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +18,7 @@ public class Settings extends AppCompatActivity {
     }
 
 
-    public void mainScreen(View view){
+    public void settingsMain(View view){
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }

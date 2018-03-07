@@ -60,6 +60,9 @@ public class SplashScreen extends AppCompatActivity {
         super.onStart();
         //make sure you alwasy call this function in onStart, not before, not after
         ButterKnife.bind(this);
+        splashImage.setVisibility(View.INVISIBLE);
+        loadingText.setVisibility(View.INVISIBLE);
+        titleText.setVisibility(View.INVISIBLE);
     }
 
     @Override

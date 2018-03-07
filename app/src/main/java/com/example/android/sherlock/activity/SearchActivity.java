@@ -1,12 +1,17 @@
 package com.example.android.sherlock.activity;
 
 import android.content.Intent;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +29,10 @@ import butterknife.ButterKnife;
 public class SearchActivity extends AppCompatActivity {
     @BindView(R.id.searchBar)
     TextView searchBar;
-
+    @BindView(R.id.SettingsBut)
+    ImageButton settings;
+    @BindView(R.id.searchButton)
+    ImageButton searchButton;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +43,8 @@ public class SearchActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         ButterKnife.bind(this);
+        settings.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
+        searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.MULTIPLY));
     }
     public void searchDatabase(View view)
     {
@@ -45,16 +55,11 @@ public class SearchActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SearchResultActivity.class);
             intent.putExtra("SEARCH_TERM", DatabaseSearch);
             startActivity(intent);
-
         }
         else
         {
             Toast.makeText(this, "Enter in Something", Toast.LENGTH_SHORT).show();
         }
-
-
-
-
 
 
     }

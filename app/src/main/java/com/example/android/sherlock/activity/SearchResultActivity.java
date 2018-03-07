@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,12 +16,21 @@ import com.example.android.sherlock.R;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
- * Created by abbin_j19pde on 1/24/2018.
+ * Created by abbin_j19pde and stephen on 1/24/2018.
  */
 
 public class SearchResultActivity extends AppCompatActivity {
     private static final String TAG = "SearchResultActivity";
+
+    @BindView(R.id.recyclerView)
+    private RecyclerView recycler;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +56,13 @@ public class SearchResultActivity extends AppCompatActivity {
         }
     }
 
+    protected void onStart() {
+        super.onStart();
+        ButterKnife.bind(this);
+        layoutManager = new LinearLayoutManager(this);
+        recycler.setLayoutManager(layoutManager);
+
+    }
 
 
 }

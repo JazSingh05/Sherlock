@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="46sp"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-smallcaps"
         android:layout_marginTop="40dp"
@@ -20,7 +20,7 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/splash_logo" />
 
     <TextView
-        android:visibility="invisible"
+        android:visibility="visible"
         android:id="@+id/loading"
         android:layout_below="@id/logo"
         android:textStyle="italic"

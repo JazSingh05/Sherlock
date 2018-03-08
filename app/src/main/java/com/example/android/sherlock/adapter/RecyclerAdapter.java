@@ -15,9 +15,11 @@ import com.example.android.sherlock.model.Store;
 import com.squareup.picasso.Picasso;
 
 import java.text.NumberFormat;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Created by stephen on 3/7/18.
@@ -27,16 +29,18 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private Map<Long, Store> storeMap;
     private Context c;
     private NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    private Random r = new Random();
+    private Map<Long, Double> distanceMap = new HashMap<>();
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public CardView cv;
-        public TextView nameText;
-        public TextView descText;
-        public TextView priceText;
-        public TextView distanceText;
-        public TextView storeText;
-        public ImageView image;
+        CardView cv;
+        TextView nameText;
+        TextView descText;
+        TextView priceText;
+        TextView distanceText;
+        TextView storeText;
+        ImageView image;
 
         public ViewHolder(View itemView ) {
             super(itemView);
@@ -54,6 +58,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         this.itemData = itemData;
         this.storeMap = storeMap;
         this.c = c;
+        for(Long l: storeMap.keySet())
+            distanceMap.put(l, r.nextDouble()*10);
     }
 
     @Override
@@ -73,8 +79,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         holder.priceText.setText(formatter.format(i.getPrice()));
         if(s != null){
             holder.storeText.setText(s.getStoreName());
+            holder.distanceText.setText(String.format(Locale.US, "%.2f mi", distanceMap.get(s.getId())));
         }
-        holder.distanceText.setText("0.3mi");
         Picasso.with(c).load(i.getImageUrl()).into(holder.image);
     }
 

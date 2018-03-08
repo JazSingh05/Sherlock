@@ -9,6 +9,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -29,8 +31,6 @@ import butterknife.ButterKnife;
 public class SearchActivity extends AppCompatActivity {
     @BindView(R.id.searchBar)
     TextView searchBar;
-    @BindView(R.id.SettingsBut)
-    ImageButton settings;
     @BindView(R.id.searchButton)
     ImageButton searchButton;
     @Override
@@ -43,8 +43,7 @@ public class SearchActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         ButterKnife.bind(this);
-        settings.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
-        searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.MULTIPLY));
+        searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
     }
     public void searchDatabase(View view)
     {
@@ -64,11 +63,21 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    public void settingsMainShow(View view){
-        Intent intent = new Intent(this, Settings.class);
-        startActivity(intent);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
+        if (id == R.id.settings) {
+            Intent intent = new Intent(this, Settings.class);
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

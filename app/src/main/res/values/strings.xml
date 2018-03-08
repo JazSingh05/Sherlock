@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Sherlock</string>
+    <string name="loading">Loading</string>
+    <string name="search_hint">What are you looking for?</string>
+    <string name="search_go">GO!</string>
+    <string name="search_settings">Settings</string>
 </resources>

@@ -3,29 +3,57 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#dddddd"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textColor="#dddddd"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="85dp"
+        android:textAlignment="center"
         android:ems="10"
         android:fontFamily="casual"
-        android:hint="Enter your item"
+        android:textAllCaps="true"
+        android:hint="@string/search_hint"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/search_bar_bg"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="83dp"
         tools:layout_editor_absoluteY="82dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+    <ImageButton
+        android:id="@+id/searchButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/searchBar"
+        android:layout_marginTop="20dp"
+        android:padding="0dp"
+        android:textSize="20sp"
+        android:src="@drawable/ic_search_white_24dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="151dp"
         android:onClick="searchDatabase"
-        android:text="Search" />
+        android:background="#00000000"
+        android:textColor="@color/colorAccent"
+        android:text="@string/search_go" />
+
+    <ImageButton
+        android:id="@+id/SettingsBut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:alpha=".5"
+        android:scaleType="fitXY"
+        android:padding="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:onClick="settingsMainShow"
+        android:src="@drawable/ic_settings_white_24dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp" />
 </RelativeLayout>

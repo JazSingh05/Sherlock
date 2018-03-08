@@ -167,6 +167,69 @@ public class Database extends SQLiteOpenHelper {
         addItem(beer3); //10.3
 
 
+        //Abbinav
+        Item apple = new Item("Apple", "Round Red and Sweet Fruit", 2.99, ralphs_id, "https://imgur.com/a/Wdjx7");
+        Item apple2 = new Item("Apple", "Red,Sweet and Healthy Fruit", 3.49, vons_id, "https://imgur.com/a/Wdjx7");
+        Item apple3 = new Item("Apple", "The edible one", 3.99, wf_id, "https://imgur.com/a/Wdjx7");
+        addItem(apple);
+        addItem(apple2);
+        addItem(apple3);
+        Item cheetos = new Item("Hot Cheetos", "Crunchy Cheese Snack", 1.99, ralphs_id, "https://imgur.com/a/GDlhD");
+        Item cheetos2 = new Item("Hot Cheetos", "Crunchy Spicy Snack", 1.99, sfid, "https://imgur.com/a/GDlhD");
+        Item cheetos3 = new Item("Hot Cheetos", "Chips that turn everything Red", 2.99, vons_id, "https://imgur.com/a/GDlhD");
+        addItem(cheetos);
+        addItem(cheetos2);
+        addItem(cheetos3);
+        Item sprite = new Item("Sprite Soda", "Lime Flavored Soft Drink", 1.69, sfid, "https://imgur.com/a/WI4hW");
+        Item sprite2 = new Item("Sprite Soda", "Caffeine Free Soft Drink", 1.99, tjs_id, "https://imgur.com/a/WI4hW");
+        Item sprite3 = new Item("Sprite Soda", "Colorless Lemon Drink", 2.09, f4l_id, "https://imgur.com/a/WI4hW");
+        addItem(sprite);
+        addItem(sprite2);
+        addItem(sprite3);
+        Item onion = new Item("Onion", "Used for flavoring foods", 2.99, wf_id, "https://imgur.com/a/TAnEL");
+        Item onion2 = new Item("Onion", "Vegetable for adding flavor to dishes", 2.19, cf_id, "https://imgur.com/a/TAnEL");
+        Item onion3 = new Item("Onion", "Sweet Yellow Onion", 2.99, vons_id, "https://imgur.com/a/TAnEL");
+        addItem(onion);
+        addItem(onion2);
+        addItem(onion3);
+        Item grapes = new Item("Grapes", "Green seedless Grapes", 2.99, ralphs_id, "https://imgur.com/a/ORP08");
+        Item grapes2 = new Item("Grapes", "Pulpy seedless Grapes", 3.49, cf_id, "https://imgur.com/a/ORP08");
+        Item grapes3 = new Item("Grapes", "Black seedless Grapes", 3.99, wf_id, "https://imgur.com/a/DiLlX");
+        addItem(grapes);
+        addItem(grapes2);
+        addItem(grapes3);
+        Item m_ms = new Item("M&M's Candy Single Size","Peanut Chocolate", 1.29, sfid, "https://imgur.com/a/XPYkC");
+        Item m_ms2 = new Item("M&M's Candy Single Size","Milk Chocolate Candy", 1.49, tjs_id, "https://imgur.com/a/XRsm2");
+        Item m_ms3 = new Item("M&M's Candy Single Size","Chocolate that melts in your mouth", 1.49, ralphs_id, "https://imgur.com/a/XRsm2");
+        addItem(m_ms);
+        addItem(m_ms2);
+        addItem(m_ms3);
+        Item gatorade = new Item("Gatorade", "Gives you energy to perform", 1.29, wf_id, "https://imgur.com/a/Y6sdU");
+        Item gatorade2 = new Item("Gatorade", "Brings out your best", 1.49, sfid, "https://imgur.com/a/Y6sdU");
+        Item gatorade3 = new Item("Gatorade", "No excuses to not try", 0.99, ralphs_id, "https://imgur.com/a/Y6sdU");
+        addItem(gatorade);
+        addItem(gatorade2);
+        addItem(gatorade3);
+        Item water = new Item("Crystal Geyser Spring Water", "Best Tasting water out there", 0.99,costco_id,"https://imgur.com/a/6OOTZ" );
+        Item water2 = new Item("Crystal Geyser Spring Water", "Capturing natural springs", 1.29,tjs_id,"https://imgur.com/a/6OOTZ" );
+        Item water3 = new Item("Crystal Geyser Spring Water", "Natural Tasting water", 0.89,sfid,"https://imgur.com/a/6OOTZ" );
+        addItem(water);
+        addItem(water2);
+        addItem(water3);
+        Item ritz = new Item("Ritz Crackers", "Crackers in fun flavors", 2.59, ralphs_id, " https://imgur.com/a/1FZHS");
+        Item ritz2 = new Item("Ritz Crackers", "Salted Crackers", 2.99, sfid, " https://imgur.com/a/1FZHS");
+        Item ritz3 = new Item("Ritz Crackers", "Salted and Buttery Snacks", 2.19, vons_id, " https://imgur.com/a/1FZHS");
+        addItem(ritz);
+        addItem(ritz2);
+        addItem(ritz3);
+        Item orangeJuice = new Item("Tropicana Orange Juice", "100% Natural Juice", 2.69, vons_id, "https://imgur.com/a/zueu8");
+        Item orangeJuice2 = new Item("Tropicana Orange Juice", "Squeezed from Fresh Oranges", 2.99, wf_id, "https://imgur.com/a/zueu8");
+        Item orangeJuice3 = new Item("Tropicana Orange Juice", "Pure Premium Orange Pulp", 3.49, tjs_id, "https://imgur.com/a/zueu8");
+        addItem(orangeJuice);
+        addItem(orangeJuice2);
+        addItem(orangeJuice3);
+
+
         //TODO: jaz add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: kyle add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: abbinav add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos

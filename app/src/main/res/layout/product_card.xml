@@ -65,6 +65,7 @@
                         android:id="@+id/card_productStore"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textStyle="bold"
                         android:text="Costco"/>
                     <TextView
                         android:id="@+id/card_productDistance"
@@ -72,6 +73,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
                         android:text="0.3mi"
                         />
 

@@ -35,25 +35,10 @@
         android:layout_marginTop="20dp"
         android:padding="0dp"
         android:textSize="20sp"
-        android:src="@drawable/ic_search_white_24dp"
+        android:src="@drawable/ic_search_white_48dp"
         android:layout_centerHorizontal="true"
         android:onClick="searchDatabase"
         android:background="#00000000"
         android:textColor="@color/colorAccent"
         android:text="@string/search_go" />
-
-    <ImageButton
-        android:id="@+id/SettingsBut"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:alpha=".5"
-        android:scaleType="fitXY"
-        android:padding="5dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:background="#00000000"
-        android:onClick="settingsMainShow"
-        android:src="@drawable/ic_settings_white_24dp"
-        android:textColor="@color/colorAccent"
-        android:textSize="20sp" />
 </RelativeLayout>

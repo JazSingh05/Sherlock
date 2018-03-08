@@ -246,11 +246,19 @@ public class Database extends SQLiteOpenHelper {
         Map<String, Item> itemMap = getItemsAsMapByName();
         for(String key: itemMap.keySet()){
             String lkey = key.toLowerCase();
-            String ldesc = itemMap.get(key).getDescription().toLowerCase();
-            if(lkey.contains(sTerm) || sTerm.contains(key) || ldesc.contains(sTerm)){
+            if(lkey.contains(sTerm) || sTerm.contains(key) || descContains(term, itemMap.get(key).getDescription())){
                 items.add(itemMap.get(key));
             }
         }
         return items;
+    }
+
+    private boolean descContains(String term, String desc) {
+        String[] descWords = desc.split(" ");
+        for(String word: descWords) {
+            if(term.equalsIgnoreCase(word))
+                return true;
+        }
+        return false;
     }
 }

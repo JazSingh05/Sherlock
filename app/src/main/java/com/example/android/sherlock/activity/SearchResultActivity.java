@@ -10,11 +10,14 @@ import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.android.sherlock.adapter.RecyclerAdapter;
 import com.example.android.sherlock.database.Database;
 import com.example.android.sherlock.model.Item;
 import com.example.android.sherlock.R;
+import com.example.android.sherlock.model.Store;
 
 import java.util.List;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,7 +30,7 @@ public class SearchResultActivity extends AppCompatActivity {
     private static final String TAG = "SearchResultActivity";
 
     @BindView(R.id.recyclerView)
-    private RecyclerView recycler;
+    RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
@@ -43,14 +46,9 @@ public class SearchResultActivity extends AppCompatActivity {
             String query = bundle.getString("SEARCH_TERM");
 
             Database db = new Database(this);
-            List<Item> queries = db.searchItems(query);
-            LinearLayout linearLayout = (LinearLayout) findViewById(R.id.mylinearlayout);
-
-            for(Item i: queries) {
-                TextView textView = new TextView(this);
-                textView.setText(i.getName());
-                linearLayout.addView(textView);
-            }
+            List<Item> items = db.searchItems(query);
+            Map<Long, Store> storeMap = db.getStoresAsMapById();
+            adapter = new RecyclerAdapter(this, items, storeMap);
         }catch (NullPointerException e) {
             Log.e(TAG, e.getMessage());
         }
@@ -61,7 +59,7 @@ public class SearchResultActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
-
+        recycler.setAdapter(adapter);
     }
 
 

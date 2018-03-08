@@ -27,6 +27,10 @@ public class Item {
         this.imageUrl = imageUrl;
     }
 
+    public Item(){
+
+    }
+
     public long getId() {
         return id;
     }

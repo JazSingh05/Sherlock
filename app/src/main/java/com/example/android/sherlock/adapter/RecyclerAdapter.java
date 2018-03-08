@@ -18,6 +18,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Created by stephen on 3/7/18.
@@ -27,16 +28,17 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     private Map<Long, Store> storeMap;
     private Context c;
     private NumberFormat formatter = NumberFormat.getCurrencyInstance();
+    private Random r = new Random();
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public CardView cv;
-        public TextView nameText;
-        public TextView descText;
-        public TextView priceText;
-        public TextView distanceText;
-        public TextView storeText;
-        public ImageView image;
+        CardView cv;
+        TextView nameText;
+        TextView descText;
+        TextView priceText;
+        TextView distanceText;
+        TextView storeText;
+        ImageView image;
 
         public ViewHolder(View itemView ) {
             super(itemView);

@@ -17,7 +17,7 @@ import java.util.Locale;
 import java.util.Map;
 
 /**
- * Created by Abbinav, Jaz on 1/28/2018. Rebuilt by Stephen on 2/28/2018
+ * Created by Abbinav, Jaskaran Buttar on 1/28/2018. Rebuilt by Stephen on 2/28/2018
  */
 
 public class Database extends SQLiteOpenHelper {
@@ -83,8 +83,28 @@ public class Database extends SQLiteOpenHelper {
         //TODO: here you guys should make a bunch of stores and items and add them to the db using the addStore and addItem methods
         //example below
         Store costco = new Store("Costco", "1111 LOVR, San Luis Obispo, 93401");
+        Store ralphs = new Store("Ralphs","201 Madonna Rd, San Luis Obispo, CA 93405");
+        Store cali_fresh = new Store("California Fresh Market SLO", "771 Foothill BLVD, San Luis Obispo, CA 93405");
+        Store lincoln_market_and_deli = new Store("Lincoln Market & Deli", "496 Broad St, San Luis Obispo, CA 93405");
+        Store san_luis_oriental_market = new Store("San Luis Oriental Market", "1255 Monterey St # C, San Luis Obispo, CA 93401");
+        Store vons = new Store("Vons","1255 Monterey St # C, San Luis Obispo, CA 93401");
+        Store smart_and_final = new Store("Smart & Final","1255 Monterey St # C, San Luis Obispo, CA 93401");
+        Store whole_foods = new Store("Whole Foods Market","1255 Monterey St # C, San Luis Obispo, CA 93401");
+        Store trader_joes = new Store("Trader Joe's","1255 Monterey St # C, San Luis Obispo, CA 93401");
+        Store food_4_less = new Store("Food 4 Less","1255 Monterey St # C, San Luis Obispo, CA 93401");
+        //All the store IDs for our database
         long costco_id =  addStore(costco); //call to add store returns the id of the newly added item, but as a long
-        Item banana = new Item("Banana", "tasty yellow fruit", 1.5, costco_id, "https://i.imgur.com/WWxI0Pq.jpg");
+        long ralphs_id = addStore(ralphs);
+        long cali_fresh_id = addStore(cali_fresh);
+        long lincoln_market_and_deli_id = addStore(lincoln_market_and_deli);
+        long san_luis_oriental_market_id = addStore(san_luis_oriental_market);
+        long vons_id = addStore(vons);
+        long smart_and_final_id = addStore(smart_and_final);
+        long whole_foods_id = addStore(whole_foods);
+        long trader_joes_id = addStore(trader_joes);
+        long food_4_less_id = addStore(food_4_less);
+        //adding items to the database using the store IDs
+        Item banana = new Item("Banana", "tasty yellow banana", 1.5, costco_id, "https://i.imgur.com/WWxI0Pq.jpg");
         long banana_id = addItem(banana);
     }
 

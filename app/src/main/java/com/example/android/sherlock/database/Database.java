@@ -84,7 +84,7 @@ public class Database extends SQLiteOpenHelper {
         //example below
         Store costco = new Store("Costco", "1111 LOVR, San Luis Obispo, 93401");
         long costco_id =  addStore(costco); //call to add store returns the id of the newly added item, but as a long
-        Item banana = new Item("Banana", "tasty yellow banana", 1.5, costco_id, "https://i.imgur.com/WWxI0Pq.jpg");
+        Item banana = new Item("Banana", "tasty yellow fruit", 1.5, costco_id, "https://i.imgur.com/WWxI0Pq.jpg");
         long banana_id = addItem(banana);
     }
 

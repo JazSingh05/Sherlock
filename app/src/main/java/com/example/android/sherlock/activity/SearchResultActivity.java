@@ -16,6 +16,7 @@ import com.example.android.sherlock.model.Item;
 import com.example.android.sherlock.R;
 import com.example.android.sherlock.model.Store;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,7 +35,6 @@ public class SearchResultActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
-
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_search);
@@ -48,6 +48,7 @@ public class SearchResultActivity extends AppCompatActivity {
             Database db = new Database(this);
             List<Item> items = db.searchItems(query);
             Map<Long, Store> storeMap = db.getStoresAsMapById();
+
             adapter = new RecyclerAdapter(this, items, storeMap);
         }catch (NullPointerException e) {
             Log.e(TAG, e.getMessage());

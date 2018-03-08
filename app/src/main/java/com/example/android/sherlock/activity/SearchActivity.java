@@ -44,7 +44,7 @@ public class SearchActivity extends AppCompatActivity {
         super.onStart();
         ButterKnife.bind(this);
         settings.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
-        searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorAccent), PorterDuff.Mode.MULTIPLY));
+        searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
     }
     public void searchDatabase(View view)
     {

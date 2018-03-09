@@ -492,8 +492,97 @@ public class Database extends SQLiteOpenHelper {
         addItem(quinoa);
         addItem(quinoa2);
         addItem(quinoa3);
-        //TODO: kyle stop playing rainbow siege and add 30 products(1 being ginger and 9 other unique items), 3 per store, comment your name above so we know whos is whos
+      
+        //KYLE
+        final String PRINGLE = "Pringles";
+        final String P_URL = "https://i.imgur.com/UofDW2g.jpg";
+        Item pringle = new Item(PRINGLE, "Crispy potato crisps with a satisfying crunch.", 1.50, ralphsId, P_URL);
+        Item pringle2 = new Item(PRINGLE, "Salty potato tasting chip", 2.00, vonsId, P_URL);
+        Item pringle3 = new Item(PRINGLE, "Chip in which you can just eat one.", 2.99, wfId, P_URL);
+        addItem(pringle);
+        addItem(pringle2);
+        addItem(pringle3);
 
+        final String MONSTER = "Monster Energy Drink";
+        final String MON_URL = "https://i.imgur.com/Cq0LLzQ.jpg";
+        Item monster = new Item(MONSTER, "Pure caffeine to unleash the beast", 1.99, lmdId, MON_URL);
+        Item monster2 = new Item(MONSTER, "Tastes like monster", 2.49, ralphsId, MON_URL);
+        Item monster3 = new Item(MONSTER, "Carbonated energy drink", 2.50, f4lId, MON_URL);
+        addItem(monster);
+        addItem(monster2);
+        addItem(monster3);
+
+        final String TUNA = "4 Pack Chicken of the Sea Canned Tuna";
+        final String TUNA_URL = "https://i.imgur.com/qVJdwtY.jpg";
+        Item tuna = new Item(TUNA, "Fresh canned tuna", 4.00, f4lId, TUNA_URL);
+        Item tuna2 = new Item(TUNA, "Albacore Tuna in water", 5.00, ralphsId, TUNA_URL);
+        Item tuna3 = new Item(TUNA, "Savory chicken of the sea", 3.56, vonsId, TUNA_URL);
+        addItem(tuna);
+        addItem(tuna2);
+        addItem(tuna3);
+
+        final String NUTELLA = "Nutella Chocolate Spread";
+        final String NUTELLA_URL = "https://i.imgur.com/jrTV34j.jpg";
+        Item nutella = new Item(NUTELLA, "Chocolate hazelnut spread", 3.48, f4lId, NUTELLA_URL);
+        Item nutella2 = new Item(NUTELLA, "Loved by kids and adults", 2.49, ralphsId, NUTELLA_URL);
+        Item nutella3 = new Item(NUTELLA, "Like peanut butter but chocolate", 3.99, vonsId, NUTELLA_URL);
+        addItem(nutella);
+        addItem(nutella2);
+        addItem(nutella3);
+
+        final String GINGER = "1.52 Ounce Ground Ginger";
+        final String GINGER_URL = "https://i.imgur.com/snXdXQc.jpg";
+        Item ginger = new Item(GINGER, "Ground ginger root", 4.99, tjsId, GINGER_URL);
+        Item ginger2 = new Item(GINGER, "Organic ground ginger spice", 3.49, wfId, GINGER_URL);
+        Item ginger3 = new Item(GINGER, "Not ground redheads.", 3.99, caliFreshId, GINGER_URL);
+        addItem(ginger);
+        addItem(ginger2);
+        addItem(ginger3);
+
+        final String KETCHUP = "32 Ounce Heinz Tomato Ketchup";
+        final String KETCHUP_URL = "https://i.imgur.com/o6BZP2C.jpg";
+        Item ketchup = new Item(KETCHUP, "Tomato Ketchup", 3.38, slomId, KETCHUP_URL);
+        Item ketchup2 = new Item(KETCHUP, "Heinz Ketchup with crisp tomato taster", 2.99, sfId, KETCHUP_URL);
+        Item ketchup3 = new Item(KETCHUP, "Perfect for fries and hamburgers", 3.25, wfId, KETCHUP_URL);
+        addItem(ketchup);
+        addItem(ketchup2);
+        addItem(ketchup3);
+
+        final String GOLDFISH = "Goldfish Crackers 30 Oz Carton";
+        final String GOLDFISH_URL = "https://i.imgur.com/Cru94OW.jpg";
+        Item goldfish = new Item(GOLDFISH, "The snack cracker smiles back", 6.26, ralphsId, GOLDFISH_URL);
+        Item goldfish2 = new Item(GOLDFISH, "Cheesy crackers shaped like fish", 7.50, vonsId, GOLDFISH_URL);
+        Item goldfish3 = new Item(GOLDFISH, "You can't eat just one.", 4.99, costcoId, GOLDFISH_URL);
+        addItem(goldfish);
+        addItem(goldfish2);
+        addItem(goldfish3);
+
+        final String PRETZEL = "Rold Gold Tiny Twist Pretzels";
+        final String PRETZEL_URL = "https://i.imgur.com/QcleCD4.jpg";
+        Item pretzel = new Item(PRETZEL, "Simple salty snack", 2.98, caliFreshId, PRETZEL_URL);
+        Item pretzel2 = new Item(PRETZEL, "Baked, not fried", 3.99, sfId, PRETZEL_URL);
+        Item pretzel3 = new Item(PRETZEL, "Pair with dips, peanut butter, or hummus", 2.50, lmdId, PRETZEL_URL);
+        addItem(pretzel);
+        addItem(pretzel2);
+        addItem(pretzel3);
+
+        final String LEMONJUICE = "RealLemon 100% Lemon Juice 8 fl oz";
+        final String LEMONJUICE_URL = "https://i.imgur.com/55uaytq.jpg";
+        Item lemonjuice = new Item(LEMONJUICE, "Fresh Lemon Juice", 1.46, wfId, LEMONJUICE_URL);
+        Item lemonjuice2 = new Item(LEMONJUICE, "Made from only lemons", 1.49, tjsId, LEMONJUICE_URL);
+        Item lemonjuice3 = new Item(LEMONJUICE, "Perfect for mixers and cakes", 1.99, ralphsId, LEMONJUICE_URL);
+        addItem(lemonjuice);
+        addItem(lemonjuice2);
+        addItem(lemonjuice3);
+
+        final String RANCH = "Hidden Valley Ranch Easy Squeeze 20 Ounce Bottle";
+        final String RANCH_URL = "https://i.imgur.com/HwfWXWT.jpg";
+        Item ranch = new Item(RANCH, "DIP, DRIZZLE, DUNK", 3.84, caliFreshId, RANCH_URL);
+        Item ranch2 = new Item(RANCH, "Gluten Free salad dressing", 4.99, vonsId, RANCH_URL);
+        Item ranch3 = new Item(RANCH, "Top anything with some hidden valley ranch.", 2.49, f4lId, RANCH_URL);
+        addItem(ranch);
+        addItem(ranch2);
+        addItem(ranch3);
 
     }
 

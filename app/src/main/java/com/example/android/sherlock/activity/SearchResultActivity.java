@@ -31,6 +31,7 @@ public class SearchResultActivity extends AppCompatActivity {
     RecyclerView recycler;
     private RecyclerView.Adapter adapter;
 
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_search);
@@ -51,6 +52,7 @@ public class SearchResultActivity extends AppCompatActivity {
         }
     }
 
+    @Override
     protected void onStart() {
         super.onStart();
         ButterKnife.bind(this);

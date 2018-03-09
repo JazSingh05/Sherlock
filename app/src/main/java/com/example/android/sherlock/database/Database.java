@@ -298,12 +298,12 @@ public class Database extends SQLiteOpenHelper {
         addItem(grapes3);
         final String M_MS = "M&M's Candy Single Size";
         final String M_MS_URL = "https://i.imgur.com/WqDs9AG.jpg";
-        Item m_ms = new Item(M_MS,"Peanut Chocolate", 1.29, sfId, M_MS_URL);
-        Item m_ms2 = new Item(M_MS,"Milk Chocolate Candy", 1.49, tjsId, M_MS_URL);
-        Item m_ms3 = new Item(M_MS,"Chocolate that melts in your mouth", 1.49, ralphsId, M_MS_URL);
-        addItem(m_ms);
-        addItem(m_ms2);
-        addItem(m_ms3);
+        Item mms = new Item(M_MS,"Peanut Chocolate", 1.29, sfId, M_MS_URL);
+        Item mms2 = new Item(M_MS,"Milk Chocolate Candy", 1.49, tjsId, M_MS_URL);
+        Item mms3 = new Item(M_MS,"Chocolate that melts in your mouth", 1.49, ralphsId, M_MS_URL);
+        addItem(mms);
+        addItem(mms2);
+        addItem(mms3);
         final String GATORADE = "Gatorade";
         final String GATORADE_URL = "https://i.imgur.com/J8S3X8o.jpg";
         Item gatorade = new Item(GATORADE, "Gives you energy to perform", 1.29, wfId, GATORADE_URL);

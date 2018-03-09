@@ -372,12 +372,12 @@ public class Database extends SQLiteOpenHelper {
         addItem(halls3);
         final String ALMOND_MILK = "Almond Milk";
         final String AM_URL = "https://imgur.com/a/QvTIr.jpg";
-        Item almond_milk = new Item(ALMOND_MILK, "white liquid juice", 4.49, ralphsId,AM_URL);
-        Item almond_milk2 = new Item(ALMOND_MILK, "great milk substitute", 3.99, caliFreshId, AM_URL);
-        Item almond_milk3 = new Item(ALMOND_MILK, "nutritional beverage", 4.99, wfId,AM_URL);
-        addItem(almond_milk);
-        addItem(almond_milk2);
-        addItem(almond_milk3);
+        Item almondMilk = new Item(ALMOND_MILK, "white liquid juice", 4.49, ralphsId,AM_URL);
+        Item almondMilk2 = new Item(ALMOND_MILK, "great milk substitute", 3.99, caliFreshId, AM_URL);
+        Item almondMilk3 = new Item(ALMOND_MILK, "nutritional beverage", 4.99, wfId,AM_URL);
+        addItem(almondMilk);
+        addItem(almondMilk2);
+        addItem(almondMilk3);
         final String TOOTHBRUSH = "Colgate Toothbrush";
         final String TOOTHBRUSH_URL = "https://imgur.com/a/i6CsX.jpg";
         Item toothbrush = new Item(TOOTHBRUSH,"Cleans your teeth", 4.29, sfId, TOOTHBRUSH_URL);
@@ -418,7 +418,6 @@ public class Database extends SQLiteOpenHelper {
         addItem(candle);
         addItem(candle2);
         addItem(candle3);
-        //TODO: jaz add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: kyle add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: mitchell add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
 

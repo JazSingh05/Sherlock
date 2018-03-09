@@ -290,10 +290,9 @@ public class Database extends SQLiteOpenHelper {
         addItem(onion3);
         final String GRAPES = "Grapes";
         final String GREEN_URL = "https://i.imgur.com/QoklVyp.jpg";
-        final String BLACK_URL = "https://imgur.com/a/DiLlX";
         Item grapes = new Item(GRAPES, "Green seedless Grapes", 2.99, ralphsId,GREEN_URL);
         Item grapes2 = new Item(GRAPES, "Pulpy seedless Grapes", 3.49, caliFreshId, GREEN_URL);
-        Item grapes3 = new Item(GRAPES, "Black seedless Grapes", 3.99, wfId,BLACK_URL);
+        Item grapes3 = new Item(GRAPES, "Black seedless Grapes", 3.99, wfId,"https://imgur.com/a/DiLlX");
         addItem(grapes);
         addItem(grapes2);
         addItem(grapes3);

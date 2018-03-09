@@ -65,7 +65,7 @@ public class Settings extends AppCompatActivity {
         });
     }
 
-    public void getLocation(View view){
+    public void getLocation(){
         if(locationToggle.isChecked()) {
             LocationRequest mLocationRequest = new LocationRequest();
             mLocationRequest.setInterval(10000);

@@ -394,12 +394,12 @@ public class Database extends SQLiteOpenHelper {
         addItem(halls3);
         final String ALMOND_MILK = "Almond Milk";
         final String AM_URL = "https://i.imgur.com/BZXKpLG.jpg";
-        Item almond_milk = new Item(ALMOND_MILK, "white liquid juice", 4.49, ralphsId,AM_URL);
-        Item almond_milk2 = new Item(ALMOND_MILK, "great milk substitute", 3.99, caliFreshId, AM_URL);
-        Item almond_milk3 = new Item(ALMOND_MILK, "nutritional beverage", 4.99, wfId,AM_URL);
-        addItem(almond_milk);
-        addItem(almond_milk2);
-        addItem(almond_milk3);
+        Item almondMilk = new Item(ALMOND_MILK, "white liquid juice", 4.49, ralphsId,AM_URL);
+        Item almondMilk2 = new Item(ALMOND_MILK, "great milk substitute", 3.99, caliFreshId, AM_URL);
+        Item almondMilk3 = new Item(ALMOND_MILK, "nutritional beverage", 4.99, wfId,AM_URL);
+        addItem(almondMilk);
+        addItem(almondMilk2);
+        addItem(almondMilk3);
         final String TOOTHBRUSH = "Colgate Toothbrush";
         final String TOOTHBRUSH_URL = "https://i.imgur.com/DBNvhfJ.jpg";
         Item toothbrush = new Item(TOOTHBRUSH,"Cleans your teeth", 4.29, sfId, TOOTHBRUSH_URL);
@@ -717,10 +717,10 @@ public class Database extends SQLiteOpenHelper {
         String sTerm = term.toLowerCase();
         ArrayList<Store> stores = new ArrayList<>();
         Map<String, Store> storesMap = getStoresAsMapByName();
-        for(String key: storesMap.keySet()){
-            String lkey = key.toLowerCase();
-            if(lkey.contains(sTerm) || sTerm.contains(key)){
-                stores.add(storesMap.get(key));
+        for(Store s: storesMap.values()){
+            String lkey = s.getStoreName().toLowerCase();
+            if(lkey.contains(sTerm) || sTerm.contains(lkey)){
+                stores.add(s);
             }
         }
         return stores;

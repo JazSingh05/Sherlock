@@ -1,36 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#eeeeee"
     android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
+        android:textSize="46sp"
+        android:visibility="visible"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
-        android:onClick="mainScreen"
-        android:text="Main Screen" />
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_marginTop="40dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimary"
+        />
 
     <ImageView
         android:id="@+id/logo"
+        android:visibility="visible"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        app:srcCompat="@drawable/p" />
+        app:srcCompat="@drawable/splash_logo" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/loading"
+        android:layout_below="@id/logo"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:onClick="Settings"
-        android:text="Settings" />
+        android:textColor="@color/colorAccent"
+        android:text="@string/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>

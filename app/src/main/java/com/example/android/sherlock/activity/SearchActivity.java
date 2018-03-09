@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,17 +33,22 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_screen);
+        ButterKnife.bind(this);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                searchDatabase();
+            }
+        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        ButterKnife.bind(this);
         searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
     }
     public void searchDatabase()
     {
-        
         if(!searchBar.getText().toString().matches("") || searchBar.getText().toString().matches("")) {
             String databaseSearch = searchBar.getText().toString();
             Log.d("CHECKING STRING", "The string you entered: " + databaseSearch);

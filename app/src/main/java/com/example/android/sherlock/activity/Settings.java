@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -62,52 +63,58 @@ public class Settings extends AppCompatActivity {
                 //nothing for now
             }
         });
+
+        locationToggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    getLocation();
+                }
+            }
+        });
     }
 
     public void getLocation(){
-        if(locationToggle.isChecked()) {
-            LocationRequest mLocationRequest = new LocationRequest();
-            mLocationRequest.setInterval(10000);
-            mLocationRequest.setFastestInterval(5000);
-            mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
-            LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
-                    .addLocationRequest(mLocationRequest);
+        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
+                .addLocationRequest(mLocationRequest);
 
-            SettingsClient client = LocationServices.getSettingsClient(this);
-            Task<LocationSettingsResponse> task = client.checkLocationSettings(builder.build());
+        SettingsClient client = LocationServices.getSettingsClient(this);
+        Task<LocationSettingsResponse> task = client.checkLocationSettings(builder.build());
 
 
-            task.addOnSuccessListener(this, new OnSuccessListener<LocationSettingsResponse>() {
-                @Override
-                public void onSuccess(LocationSettingsResponse locationSettingsResponse) {
-                    // All location settings are satisfied. The client can initialize
-                    // location requests here.
-                    // ...
-                }
-            });
+        task.addOnSuccessListener(this, new OnSuccessListener<LocationSettingsResponse>() {
+            @Override
+            public void onSuccess(LocationSettingsResponse locationSettingsResponse) {
+                // All location settings are satisfied. The client can initialize
+                // location requests here.
+                // ...
+            }
+        });
 
-            task.addOnFailureListener(this, new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    if (e instanceof ResolvableApiException) {
-                        // Location settings are not satisfied, but this can be fixed
-                        // by showing the user a dialog.
-                        try {
-                            // Show the dialog by calling startResolutionForResult(),
-                            // and check the result in onActivityResult().
-                            ResolvableApiException resolvable = (ResolvableApiException) e;
-                            resolvable.startResolutionForResult(Settings.this,
-                                    0x1);
-                        } catch (IntentSender.SendIntentException sendEx) {
-                            // Ignore the error.
-                            Log.e(TAG, sendEx.getMessage());
-                        }
+        task.addOnFailureListener(this, new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                if (e instanceof ResolvableApiException) {
+                    // Location settings are not satisfied, but this can be fixed
+                    // by showing the user a dialog.
+                    try {
+                        // Show the dialog by calling startResolutionForResult(),
+                        // and check the result in onActivityResult().
+                        ResolvableApiException resolvable = (ResolvableApiException) e;
+                        resolvable.startResolutionForResult(Settings.this,
+                                0x1);
+                    } catch (IntentSender.SendIntentException sendEx) {
+                        // Ignore the error.
+                        Log.e(TAG, sendEx.getMessage());
                     }
                 }
-            });
-
-        }
+            }
+        });
     }
 
 }

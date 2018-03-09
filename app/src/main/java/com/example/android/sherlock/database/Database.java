@@ -733,7 +733,7 @@ public class Database extends SQLiteOpenHelper {
 
         for(Item i: items){
             String name = i.getName().toLowerCase();
-            if(name.contains(sTerm) || sTerm.contains(name) || descContains(term, i.getDescription())){
+            if(name.contains(sTerm) || sTerm.contains(name) || descContains(sTerm, i.getDescription())){
                 results.add(i);
             }
         }
@@ -743,7 +743,8 @@ public class Database extends SQLiteOpenHelper {
     private boolean descContains(String term, String desc) {
         String[] descWords = desc.split(" ");
         for(String word: descWords) {
-            if(term.equalsIgnoreCase(word))
+            String w = word.toLowerCase();
+            if(term.equals(w) || w.contains(term))
                 return true;
         }
         return false;

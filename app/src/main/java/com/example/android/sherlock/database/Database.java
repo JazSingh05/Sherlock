@@ -613,6 +613,8 @@ public class Database extends SQLiteOpenHelper {
         //TVS
         final String BN_TV = "Brand new television";
         final String SD_TV = "Standard definition television";
+        final String BN_STV = "Brand new smart television";
+        final String SD_STV = "Standard definition smart television";
         final String WEST24 = "Westinghouse - 24 Inch 720p";
         final String WEST24_URL = "https://i.imgur.com/Ad9Cb5v.jpg";
         Item west24 = new Item(WEST24, "Standard def 24 Inch television", 89.99, tarId, WEST24_URL);
@@ -648,8 +650,8 @@ public class Database extends SQLiteOpenHelper {
         final String WEST32SMH = "Westinghouse 32 Inch LED 720p Smart Television";
         final String WEST32SMH_URL = "https://i.imgur.com/futEmGt.jpg";
         Item west32smh = new Item(WEST32SMH, "Standard 32 Inch television", 139.99, tarId, WEST32SMH_URL);
-        Item west32smh2 = new Item(WEST32SMH, "Standard definition smart television", 129.99, costcoId, WEST32SMH_URL);
-        Item west32smh3 = new Item(WEST32SMH, "Brand new smart television", 119.99, bbId, WEST32SMH_URL);
+        Item west32smh2 = new Item(WEST32SMH, SD_STV, 129.99, costcoId, WEST32SMH_URL);
+        Item west32smh3 = new Item(WEST32SMH, BN_STV, 119.99, bbId, WEST32SMH_URL);
         addItem(west32smh);
         addItem(west32smh2);
         addItem(west32smh3);
@@ -672,16 +674,16 @@ public class Database extends SQLiteOpenHelper {
         final String SAM2445 = "Samsung 24 Inch 720p Smart TV";
         final String SAM2445_URL = "https://i.imgur.com/uWsLgCF.jpg";
         Item sam2445 = new Item(SAM2445, "Standard definition 24 Inch smart television", 149.99, tarId, SAM2445_URL);
-        Item sam24452 = new Item(SAM2445, "Standard definition smart television", 145.99, costcoId, SAM2445_URL);
-        Item sam24453 = new Item(SAM2445, "Brand new smart television", 139.99, bbId, SAM2445_URL);
+        Item sam24452 = new Item(SAM2445, SD_STV, 145.99, costcoId, SAM2445_URL);
+        Item sam24453 = new Item(SAM2445, BN_STV, 139.99, bbId, SAM2445_URL);
         addItem(sam2445);
         addItem(sam24452);
         addItem(sam24453);
         final String LG24WU = "LG 24 Inch 720p Smart TV";
         final String LG24WU_URL = "https://i.imgur.com/WnVwunq.jpg";
         Item lg24wu = new Item(LG24WU, "Standard definition 24 Inch smart television", 149.99, tarId, LG24WU_URL);
-        Item lg24wu2 = new Item(LG24WU, "Standard definition smart television", 145.99, costcoId, LG24WU_URL);
-        Item lg24wu3 = new Item(LG24WU, "Brand new smart television", 139.99, bbId, LG24WU_URL);
+        Item lg24wu2 = new Item(LG24WU, SD_STV, 145.99, costcoId, LG24WU_URL);
+        Item lg24wu3 = new Item(LG24WU, BN_STV, 139.99, bbId, LG24WU_URL);
         addItem(lg24wu);
         addItem(lg24wu2);
         addItem(lg24wu3);

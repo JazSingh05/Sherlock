@@ -166,6 +166,76 @@ public class Database extends SQLiteOpenHelper {
         addItem(beer2); //10.2
         addItem(beer3); //10.3
 
+        //Jordan
+        Item chickenBreasts = new Item("Chicken Breasts", "Protein packed poultry", 2.99, ralphs_id, "https://i.imgur.com/bb1c1Iq.jpg");
+        Item chickenBreasts2 = new Item("Chicken Breasts", "Tasty and healthy bird meat", 3.15, cf_id, "https://i.imgur.com/bb1c1Iq.jpg");
+        Item chickenBreasts3 = new Item("Chicken Breasts", "Inexpensive and healthy protein", 2.99, vons_id, "https://i.imgur.com/bb1c1Iq.jpg");
+        addItem(chickenBreasts);
+        addItem(chickenBreasts2);
+        addItem(chickenBreasts3);
+        Item coke12Cans = new Item("Coke 12 cans", "Delicious and refreshing soft drink", 4.99, ralphs_id, "https://i.imgur.com/4D55jln.jpg");
+        Item coke12Cans2 = new Item("Coke 12 cans", "Refreshing and popular cola", 4.99, vons_id, "https://i.imgur.com/4D55jln.jpg");
+        Item coke12Cans3 = new Item("Coke 12 cans", "Delicious soda beverage", 4.99, sfid, "https://i.imgur.com/4D55jln.jpg");
+        addItem(coke12Cans);
+        addItem(coke12Cans2);
+        addItem(coke12Cans3);
+        Item condoms = new Item("Condoms", "36 of the most popular penile-contraceptive product", 27.99, ralphs_id, "https://i.imgur.com/hFPgUX8.jpg");
+        Item condoms2 = new Item("Condoms", "Softest and most durable condoms on the market", 27.99, vons_id, "https://i.imgur.com/hFPgUX8.jpg");
+        Item condoms3 = new Item("Condoms", "Cozier than socks knitted by your grandma", 31.99, sfid, "https://i.imgur.com/hFPgUX8.jpg");
+        addItem(condoms);
+        addItem(condoms2);
+        addItem(condoms3);
+        Item asparagus = new Item("Asparagus", "Delicious and nutritious vegetable", .67, ralphs_id, "https://i.imgur.com/Djqk9Vz.jpg");
+        Item asparagus2 = new Item("Asparagus", "Tasty vegetable that is good for you", .69, vons_id, "https://i.imgur.com/Djqk9Vz.jpg");
+        Item asparagus3 = new Item("Asparagus", "Green and delicious vegetable", .77, sfid, "https://i.imgur.com/Djqk9Vz.jpg");
+        addItem(asparagus);
+        addItem(asparagus2);
+        addItem(asparagus3);
+        Item lettuce = new Item("Lettuce", "Round and nutritious vegetable", 1.69, ralphs_id, "https://i.imgur.com/mtVdQbR.jpg");
+        Item lettuce2 = new Item("Lettuce", "Healthy and tasty green vegetable", 1.79, vons_id, "https://i.imgur.com/mtVdQbR.jpg");
+        Item lettuce3 = new Item("Lettuce", "Green, round vegetable", 1.99, sfid, "https://i.imgur.com/mtVdQbR.jpg");
+        addItem(lettuce);
+        addItem(lettuce2);
+        addItem(lettuce3);
+        Item milkGallon = new Item("Milk Gallon", "1 Gallon of delicious cow's milk", 2.75, ralphs_id, "https://i.imgur.com/XDdGN1P.jpg");
+        Item milkGallon2 = new Item("Milk Gallon", "Tasty cow milk", 2.95, vons_id, "https://i.imgur.com/XDdGN1P.jpg");
+        Item milkGallon3 = new Item("Milk Gallon", "Delicious milk straight from the cow's teet", 3.05, sfid, "https://i.imgur.com/XDdGN1P.jpg");
+        addItem(milkGallon);
+        addItem(milkGallon2);
+        addItem(milkGallon3);
+        Item cashews = new Item("Cashews", "Package of top-quality nuts", 7.99, sfid, "https://i.imgur.com/OhtJLCx.jpg");
+        Item cashews2 = new Item("Cashews", "Salty and Tasty Cashews", 6.99, ralphs_id, "https://i.imgur.com/OhtJLCx.jpg");
+        Item cashews3 = new Item("Cashews", "High quality nuts", 7.59, vons_id, "https://i.imgur.com/OhtJLCx.jpg");
+        addItem(cashews);
+        addItem(cashews2);
+        addItem(cashews3);
+        Item pear = new Item("Pear", "Tasty, green/yellow fruit", .59, ralphs_id, "https://i.imgur.com/gG4xaCe.png");
+        Item pear2 = new Item("Pear", "Healthy fruit", .59, sfid, "https://i.imgur.com/gG4xaCe.png");
+        Item pear3 = new Item("Pear", "Fruit shaped like an oblong-apple", .59, vons_id, "https://i.imgur.com/gG4xaCe.png");
+        addItem(pear);
+        addItem(pear2);
+        addItem(pear3);
+        Item skittles = new Item("Skittles", "Fruit flavored candy", 1.09, ralphs_id, "https://i.imgur.com/tpdhopo.jpg");
+        Item skittles2 = new Item("Skittles", "Candy flavored like the rainbow", .99, sfid, "https://i.imgur.com/tpdhopo.jpg");
+        Item skittles3 = new Item("Skittles", "Delicious fruity candy", 1.07, vons_id, "https://i.imgur.com/tpdhopo.jpg");
+        addItem(skittles);
+        addItem(skittles2);
+        addItem(skittles3);
+        Item starburst = new Item("Starburst", "Bite-sized fruity candy", 1.09, ralphs_id, "https://i.imgur.com/WCB3jbI.jpg");
+        Item starburst2 = new Item("Starburst", "Fruit flavored candy", .99, sfid, "https://i.imgur.com/WCB3jbI.jpg");
+        Item starburst3 = new Item("Starburst", "Individually packaged candy treats", 1.07, vons_id, "https://i.imgur.com/WCB3jbI.jpg");
+        addItem(starburst);
+        addItem(starburst2);
+        addItem(starburst3);
+        Item carrot = new Item("Carrot", "Healthy and nutritious orange vegetable", .60, vons_id, "https://i.imgur.com/JtqRsdU.jpg");
+        Item carrot2 = new Item("Carrot", "Nutrition packed vegetable", .65, ralphs_id, "https://i.imgur.com/JtqRsdU.jpg");
+        Item carrot3 = new Item("Carrot", "Equally enjoy from farm animals to humans", .77, cf_id, "https://i.imgur.com/JtqRsdU.jpg");
+        addItem(carrot);
+        addItem(carrot2);
+        addItem(carrot3);
+
+
+
 
         //Abbinav
         Item apple = new Item("Apple", "Round Red and Sweet Fruit", 2.99, ralphs_id, "https://i.imgur.com/B3Y8cVf.jpg");

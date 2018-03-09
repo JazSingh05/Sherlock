@@ -7,8 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.android.sherlock.adapter.RecyclerAdapter;
 import com.example.android.sherlock.database.Database;
@@ -16,7 +14,6 @@ import com.example.android.sherlock.model.Item;
 import com.example.android.sherlock.R;
 import com.example.android.sherlock.model.Store;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,7 +30,6 @@ public class SearchResultActivity extends AppCompatActivity {
     @BindView(R.id.recyclerView)
     RecyclerView recycler;
     private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +54,7 @@ public class SearchResultActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         ButterKnife.bind(this);
-        layoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
         recycler.setAdapter(adapter);
     }

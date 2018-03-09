@@ -24,6 +24,7 @@ import butterknife.ButterKnife;
 
 //lets go travis
 public class SplashScreen extends AppCompatActivity {
+    private static final String TAG = "SplashScreenActivity";
     //This is how you bind a view in XML to a global var in the class
     @BindView(R.id.logo)
     ImageView splashImage;
@@ -44,7 +45,11 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        getSupportActionBar().hide();
+        try {
+            getSupportActionBar().hide();
+        }catch(NullPointerException npe) {
+            Log.e(TAG, npe.getMessage());
+        }
         buildAnimations();
 
         this.db = new Database(this);

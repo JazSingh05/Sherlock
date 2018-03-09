@@ -1,6 +1,7 @@
 package com.example.android.sherlock.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,16 +25,15 @@ import java.util.Random;
 /**
  * Created by stephen on 3/7/18.
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.SherlockViewHolder> {
     private List<Item> itemData;
     private Map<Long, Store> storeMap;
     private Context c;
     private NumberFormat formatter = NumberFormat.getCurrencyInstance();
-    private Random r = new Random();
     private Map<Long, Double> distanceMap = new HashMap<>();
 
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class SherlockViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView nameText;
         TextView descText;
@@ -42,7 +42,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         TextView storeText;
         ImageView image;
 
-        public ViewHolder(View itemView ) {
+        SherlockViewHolder(View itemView ) {
             super(itemView);
             cv =  itemView.findViewById(R.id.product_card);
             nameText =  itemView.findViewById(R.id.card_productName);
@@ -58,20 +58,21 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         this.itemData = itemData;
         this.storeMap = storeMap;
         this.c = c;
+        Random r = new Random();
         for(Long l: storeMap.keySet())
             distanceMap.put(l, r.nextDouble()*10);
     }
 
+    @NonNull
     @Override
-    public RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public SherlockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_card, parent, false);
-        ViewHolder vh = new ViewHolder(v);
-        return vh;
+        return new SherlockViewHolder(v);
     }
 
     // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull SherlockViewHolder holder, int position) {
         Item i = itemData.get(position);
         Store s = storeMap.get(i.getStoreId());
         holder.nameText.setText(i.getName());

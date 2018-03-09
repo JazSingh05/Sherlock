@@ -1,7 +1,5 @@
 package com.example.android.sherlock.model;
 
-import android.graphics.Bitmap;
-
 import java.util.Locale;
 
 /**

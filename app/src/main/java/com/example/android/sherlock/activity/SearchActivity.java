@@ -1,7 +1,6 @@
 package com.example.android.sherlock.activity;
 
 import android.content.Intent;
-import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
@@ -12,14 +11,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.sherlock.R;
-
-import org.w3c.dom.Text;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,10 +45,10 @@ public class SearchActivity extends AppCompatActivity {
     {
         
         if(!searchBar.getText().toString().matches("") || searchBar.getText().toString().matches("")) {
-            String DatabaseSearch = searchBar.getText().toString();
-            Log.d("CHECKING STRING", "The string you entered: " + DatabaseSearch);
+            String databaseSearch = searchBar.getText().toString();
+            Log.d("CHECKING STRING", "The string you entered: " + databaseSearch);
             Intent intent = new Intent(this, SearchResultActivity.class);
-            intent.putExtra("SEARCH_TERM", DatabaseSearch);
+            intent.putExtra("SEARCH_TERM", databaseSearch);
             startActivity(intent);
         }
         else

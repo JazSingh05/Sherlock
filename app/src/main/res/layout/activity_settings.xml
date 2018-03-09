@@ -46,7 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_gravity="end"
-            android:text="" />
+            android:text=""
+            android:onClick="getLocation"/>
 
 
     </LinearLayout>
@@ -77,31 +78,38 @@
 
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/radiusSeekbar"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/location_container"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="88dp" />
+        android:layout_centerVertical="true" />
 
     <TextView
-        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/seekBar"
+        android:id="@+id/seekBarProgress"
+        android:layout_below="@+id/radiusDistance"
+        android:layout_above="@+id/radiusSeekbar"
+        android:text="0"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/radiusDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/factor_container"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="34dp"
         android:text="Radius Distance"
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/SaveSettings"
+        android:id="@+id/saveSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="27dp"
-        android:onClick="settingsMain"
         android:textColor="@color/colorAccent"
         android:background="#00000000"
         android:text="Save Settings" />

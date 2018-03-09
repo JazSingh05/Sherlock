@@ -1,18 +1,15 @@
 package com.example.android.sherlock.activity;
 
-import android.content.Intent;
 import android.content.IntentSender;
-import android.support.annotation.NonNull;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SwitchCompat;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import com.example.android.sherlock.R;
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -25,48 +22,51 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
-public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
+public class Settings extends AppCompatActivity {
+    private static final String TAG = "Settings";
+    @BindView(R.id.radiusSeekbar)
     SeekBar seekBar;
+    @BindView(R.id.toggleLocations)
+    Switch locationToggle;
+    @BindView(R.id.toggleNotifications)
+    Switch notificationToggle;
+    @BindView(R.id.toggleFactor)
+    Switch factorToggle;
+    @BindView(R.id.seekBarProgress)
+    TextView seekbarProgress;
+    @BindView(R.id.saveSettings)
+    Button saveSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        seekBar = (SeekBar) findViewById(R.id.seekBar);
+        ButterKnife.bind(this);
+
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-
-            int progress = 0;
-
-
-
             @Override
-
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                TextView textView = (TextView) findViewById(R.id.seekBarProgress);
                 Log.d("Seekbar", "Progress = " + progress);
-                textView.setText(String.valueOf(progress));
+                seekbarProgress.setText(String.valueOf(progress));
             }
 
             @Override
-
             public void onStartTrackingTouch(SeekBar seekBar) {
+                //nothing for now
             }
 
-
-
             @Override
-
             public void onStopTrackingTouch(SeekBar seekBar) {
+                //nothing for now
             }
         });
-
     }
 
     public void getLocation(View view){
-        Switch toggle = (Switch) findViewById(R.id.toggleLocations);
-
-        if(toggle.isChecked()) {
+        if(locationToggle.isChecked()) {
             LocationRequest mLocationRequest = new LocationRequest();
             mLocationRequest.setInterval(10000);
             mLocationRequest.setFastestInterval(5000);
@@ -102,6 +102,7 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
                                     0x1);
                         } catch (IntentSender.SendIntentException sendEx) {
                             // Ignore the error.
+                            Log.e(TAG, sendEx.getMessage());
                         }
                     }
                 }
@@ -110,27 +111,6 @@ public class Settings extends AppCompatActivity implements SeekBar.OnSeekBarChan
         }
     }
 
-
-
-
-    //I have no idea why, but these 3 calls are needed for the seekprogress bar, even though
-    //I tried running the code in here it didn't work, but it does in oncreate. Deleting these
-    //functions gives the error that they aren't in the file
-
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-
-    }
-
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-
-    }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-
-    }
 }
 
 

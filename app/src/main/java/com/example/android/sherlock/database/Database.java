@@ -418,8 +418,82 @@ public class Database extends SQLiteOpenHelper {
         addItem(candle);
         addItem(candle2);
         addItem(candle3);
-        //TODO: kyle add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
-        //TODO: mitchell add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
+
+        //Mitchell
+        final String TURKEY = "Turkey";
+        final String TK_URL = "https://i.imgur.com/yO8uR6I.jpg";
+        Item turkey = new Item(TURKEY, "lunch meat", 2.99, ralphsId, TK_URL);
+        Item turkey2 = new Item(TURKEY, "Sandwich meat", 4.99, costcoId, TK_URL);
+        Item turkey3 = new Item(TURKEY, "specialty lunch meat", 1.99, f4lId, TK_URL);
+        addItem(turkey);
+        addItem(turkey2);
+        addItem(turkey3);
+        final String SPINACH = "Spinach";
+        final String SNCH_URL = "https://i.imgur.com/ffpxG8F.png";
+        Item spinach = new Item(SPINACH, "Fresh green vegetable", 2.99, f4lId, SNCH_URL);
+        Item spinach2 = new Item(SPINACH, "Healthy choice", 4.50, wfId, SNCH_URL);
+        Item spinach3 = new Item(SPINACH, "Great for dieting", 5.00, tjsId, SNCH_URL);
+        addItem(spinach);
+        addItem(spinach2);
+        addItem(spinach3);
+        final String COOKIES = "Cookies";
+        final String CKE_URL = "https://i.imgur.com/8QzDCge.jpg";
+        Item cookies = new Item(COOKIES, "Delicious chocolate chip", 2.99, vonsId, CKE_URL);
+        Item cookies2 = new Item(COOKIES, "Yummy oatmeal", 4.99, costcoId, CKE_URL);
+        Item cookies3 = new Item(COOKIES, "Great mint chocolate", 4.50, tjsId, CKE_URL);
+        addItem(cookies);
+        addItem(cookies2);
+        addItem(cookies3);
+        final String SOUP = "Soup";
+        final String SP_URL = "https://i.imgur.com/gI2o94G.jpg";
+        Item soup = new Item(SOUP, "Warm and delicious chicken soup", 0.99,f4lId, SP_URL);
+        Item soup2 = new Item(SOUP, "Hearty and filling enchilda soup", 1.99, caliFreshId, SP_URL);
+        Item soup3 = new Item(SOUP, "Great for the soul", 2.00, ralphsId, SP_URL);
+        addItem(soup);
+        addItem(soup2);
+        addItem(soup3);
+        final String TAPATIO = "Tapatio";
+        final String TPO_URL = "https://i.imgur.com/JpR47E8.jpg";
+        Item tapatio = new Item(TAPATIO, "Spicy!", 0.99, f4lId, TPO_URL);
+        Item tapatio2 = new Item(TAPATIO, "Gives a kick", 1.99, ralphsId, TPO_URL);
+        Item tapatio3 = new Item(TAPATIO, "BAM", 3.50, costcoId, TPO_URL);
+        addItem(tapatio);
+        addItem(tapatio2);
+        addItem(tapatio3);
+        final String BEANS = "Beans";
+        final String BNS_URL = "https://i.imgur.com/wcbNDFo.jpg";
+        Item beans = new Item(BEANS, "Raw pinto beans", 1.50, ralphsId, BNS_URL);
+        Item beans2 = new Item(BEANS, "Canned beans", 2.99, tjsId, BNS_URL);
+        Item beans3 = new Item(BEANS, "Raw black beans", 1.50, ralphsId, BNS_URL);
+        addItem(beans);
+        addItem(beans2);
+        addItem(beans3);
+        final String POTATOES = "Potatoes";
+        final String PTO_URL = "https://i.imgur.com/9wnWuxH.jpg";
+        Item potatoes = new Item(POTATOES, "Bag of russets", 4.99, costcoId, PTO_URL);
+        Item potatoes2 = new Item(POTATOES, "Bag of reds", 3.99, vonsId, PTO_URL);
+        Item potatoes3 = new Item(POTATOES, "Sweet potato", 1.00, ralphsId, PTO_URL);
+        addItem(potatoes);
+        addItem(potatoes2);
+        addItem(potatoes3);
+        final String RICE = "Rice";
+        final String R_URL = "https://i.imgur.com/LHSldqH.jpg";
+        Item rice = new Item(RICE, "White rice", 1.00, ralphsId, R_URL);
+        Item rice2 = new Item(RICE, "Large bag of brown rice", 3.50, costcoId, R_URL);
+        Item rice3 = new Item(RICE, "Large bag of white rice", 4.00, costcoId, R_URL);
+        addItem(rice);
+        addItem(rice2);
+        addItem(rice3);
+        final String QUINOA = "Quinoa";
+        final String QOA_URL = "https://i.imgur.com/2OGujrQ.jpg";
+        Item quinoa = new Item(QUINOA, "Fiber heavy", 4.50, costcoId, QOA_URL);
+        Item quinoa2 = new Item(QUINOA, "Lots of nutrition", 6.50, wfId, QOA_URL);
+        Item quinoa3 = new Item(QUINOA, "Your colon thanks you", 5.00, tjsId, QOA_URL);
+        addItem(quinoa);
+        addItem(quinoa2);
+        addItem(quinoa3);
+        //TODO: kyle stop playing rainbow siege and add 30 products(1 being ginger and 9 other unique items), 3 per store, comment your name above so we know whos is whos
+
 
     }
 

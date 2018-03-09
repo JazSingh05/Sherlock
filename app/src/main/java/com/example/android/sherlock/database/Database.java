@@ -166,73 +166,141 @@ public class Database extends SQLiteOpenHelper {
         addItem(beer2); //10.2
         addItem(beer3); //10.3
 
+        //Jordan
+        Item chickenBreasts = new Item("Chicken Breasts", "Protein packed poultry", 2.99, ralphs_id, "https://i.imgur.com/bb1c1Iq.jpg");
+        Item chickenBreasts2 = new Item("Chicken Breasts", "Tasty and healthy bird meat", 3.15, cf_id, "https://i.imgur.com/bb1c1Iq.jpg");
+        Item chickenBreasts3 = new Item("Chicken Breasts", "Inexpensive and healthy protein", 2.99, vons_id, "https://i.imgur.com/bb1c1Iq.jpg");
+        addItem(chickenBreasts);
+        addItem(chickenBreasts2);
+        addItem(chickenBreasts3);
+        Item coke12Cans = new Item("Coke 12 cans", "Delicious and refreshing soft drink", 4.99, ralphs_id, "https://i.imgur.com/4D55jln.jpg");
+        Item coke12Cans2 = new Item("Coke 12 cans", "Refreshing and popular cola", 4.99, vons_id, "https://i.imgur.com/4D55jln.jpg");
+        Item coke12Cans3 = new Item("Coke 12 cans", "Delicious soda beverage", 4.99, sfid, "https://i.imgur.com/4D55jln.jpg");
+        addItem(coke12Cans);
+        addItem(coke12Cans2);
+        addItem(coke12Cans3);
+        Item condoms = new Item("Condoms", "36 of the most popular penile-contraceptive product", 27.99, ralphs_id, "https://i.imgur.com/hFPgUX8.jpg");
+        Item condoms2 = new Item("Condoms", "Softest and most durable condoms on the market", 27.99, vons_id, "https://i.imgur.com/hFPgUX8.jpg");
+        Item condoms3 = new Item("Condoms", "Cozier than socks knitted by your grandma", 31.99, sfid, "https://i.imgur.com/hFPgUX8.jpg");
+        addItem(condoms);
+        addItem(condoms2);
+        addItem(condoms3);
+        Item asparagus = new Item("Asparagus", "Delicious and nutritious vegetable", .67, ralphs_id, "https://i.imgur.com/Djqk9Vz.jpg");
+        Item asparagus2 = new Item("Asparagus", "Tasty vegetable that is good for you", .69, vons_id, "https://i.imgur.com/Djqk9Vz.jpg");
+        Item asparagus3 = new Item("Asparagus", "Green and delicious vegetable", .77, sfid, "https://i.imgur.com/Djqk9Vz.jpg");
+        addItem(asparagus);
+        addItem(asparagus2);
+        addItem(asparagus3);
+        Item lettuce = new Item("Lettuce", "Round and nutritious vegetable", 1.69, ralphs_id, "https://i.imgur.com/mtVdQbR.jpg");
+        Item lettuce2 = new Item("Lettuce", "Healthy and tasty green vegetable", 1.79, vons_id, "https://i.imgur.com/mtVdQbR.jpg");
+        Item lettuce3 = new Item("Lettuce", "Green, round vegetable", 1.99, sfid, "https://i.imgur.com/mtVdQbR.jpg");
+        addItem(lettuce);
+        addItem(lettuce2);
+        addItem(lettuce3);
+        Item milkGallon = new Item("Milk Gallon", "1 Gallon of delicious cow's milk", 2.75, ralphs_id, "https://i.imgur.com/XDdGN1P.jpg");
+        Item milkGallon2 = new Item("Milk Gallon", "Tasty cow milk", 2.95, vons_id, "https://i.imgur.com/XDdGN1P.jpg");
+        Item milkGallon3 = new Item("Milk Gallon", "Delicious milk straight from the cow's teet", 3.05, sfid, "https://i.imgur.com/XDdGN1P.jpg");
+        addItem(milkGallon);
+        addItem(milkGallon2);
+        addItem(milkGallon3);
+        Item cashews = new Item("Cashews", "Package of top-quality nuts", 7.99, sfid, "https://i.imgur.com/OhtJLCx.jpg");
+        Item cashews2 = new Item("Cashews", "Salty and Tasty Cashews", 6.99, ralphs_id, "https://i.imgur.com/OhtJLCx.jpg");
+        Item cashews3 = new Item("Cashews", "High quality nuts", 7.59, vons_id, "https://i.imgur.com/OhtJLCx.jpg");
+        addItem(cashews);
+        addItem(cashews2);
+        addItem(cashews3);
+        Item pear = new Item("Pear", "Tasty, green/yellow fruit", .59, ralphs_id, "https://i.imgur.com/gG4xaCe.png");
+        Item pear2 = new Item("Pear", "Healthy fruit", .59, sfid, "https://i.imgur.com/gG4xaCe.png");
+        Item pear3 = new Item("Pear", "Fruit shaped like an oblong-apple", .59, vons_id, "https://i.imgur.com/gG4xaCe.png");
+        addItem(pear);
+        addItem(pear2);
+        addItem(pear3);
+        Item skittles = new Item("Skittles", "Fruit flavored candy", 1.09, ralphs_id, "https://i.imgur.com/tpdhopo.jpg");
+        Item skittles2 = new Item("Skittles", "Candy flavored like the rainbow", .99, sfid, "https://i.imgur.com/tpdhopo.jpg");
+        Item skittles3 = new Item("Skittles", "Delicious fruity candy", 1.07, vons_id, "https://i.imgur.com/tpdhopo.jpg");
+        addItem(skittles);
+        addItem(skittles2);
+        addItem(skittles3);
+        Item starburst = new Item("Starburst", "Bite-sized fruity candy", 1.09, ralphs_id, "https://i.imgur.com/WCB3jbI.jpg");
+        Item starburst2 = new Item("Starburst", "Fruit flavored candy", .99, sfid, "https://i.imgur.com/WCB3jbI.jpg");
+        Item starburst3 = new Item("Starburst", "Individually packaged candy treats", 1.07, vons_id, "https://i.imgur.com/WCB3jbI.jpg");
+        addItem(starburst);
+        addItem(starburst2);
+        addItem(starburst3);
+        Item carrot = new Item("Carrot", "Healthy and nutritious orange vegetable", .60, vons_id, "https://i.imgur.com/JtqRsdU.jpg");
+        Item carrot2 = new Item("Carrot", "Nutrition packed vegetable", .65, ralphs_id, "https://i.imgur.com/JtqRsdU.jpg");
+        Item carrot3 = new Item("Carrot", "Equally enjoy from farm animals to humans", .77, cf_id, "https://i.imgur.com/JtqRsdU.jpg");
+        addItem(carrot);
+        addItem(carrot2);
+        addItem(carrot3);
+
+
+
 
         //Abbinav
-        Item apple = new Item("Apple", "Round Red and Sweet Fruit", 2.99, ralphs_id, "https://imgur.com/a/Wdjx7");
-        Item apple2 = new Item("Apple", "Red,Sweet and Healthy Fruit", 3.49, vons_id, "https://imgur.com/a/Wdjx7");
-        Item apple3 = new Item("Apple", "The edible one", 3.99, wf_id, "https://imgur.com/a/Wdjx7");
+        Item apple = new Item("Apple", "Round Red and Sweet Fruit", 2.99, ralphs_id, "https://i.imgur.com/B3Y8cVf.jpg");
+        Item apple2 = new Item("Apple", "Red,Sweet and Healthy Fruit", 3.49, vons_id, "https://i.imgur.com/B3Y8cVf.jpg");
+        Item apple3 = new Item("Apple", "The edible one", 3.99, wf_id, "https://i.imgur.com/B3Y8cVf.jpg");
         addItem(apple);
         addItem(apple2);
         addItem(apple3);
-        Item cheetos = new Item("Hot Cheetos", "Crunchy Cheese Snack", 1.99, ralphs_id, "https://imgur.com/a/GDlhD");
-        Item cheetos2 = new Item("Hot Cheetos", "Crunchy Spicy Snack", 1.99, sfid, "https://imgur.com/a/GDlhD");
-        Item cheetos3 = new Item("Hot Cheetos", "Chips that turn everything Red", 2.99, vons_id, "https://imgur.com/a/GDlhD");
+        Item cheetos = new Item("Hot Cheetos", "Crunchy Cheese Snack", 1.99, ralphs_id, "https://i.imgur.com/TUiAMwm.jpg");
+        Item cheetos2 = new Item("Hot Cheetos", "Crunchy Spicy Snack", 1.99, sfid, "https://i.imgur.com/TUiAMwm.jpg");
+        Item cheetos3 = new Item("Hot Cheetos", "Chips that turn everything Red", 2.99, vons_id, "https://i.imgur.com/TUiAMwm.jpg");
         addItem(cheetos);
         addItem(cheetos2);
         addItem(cheetos3);
-        Item sprite = new Item("Sprite Soda", "Lime Flavored Soft Drink", 1.69, sfid, "https://imgur.com/a/WI4hW");
-        Item sprite2 = new Item("Sprite Soda", "Caffeine Free Soft Drink", 1.99, tjs_id, "https://imgur.com/a/WI4hW");
-        Item sprite3 = new Item("Sprite Soda", "Colorless Lemon Drink", 2.09, f4l_id, "https://imgur.com/a/WI4hW");
+        Item sprite = new Item("Sprite Soda", "Lime Flavored Soft Drink", 1.69, sfid, "https://i.imgur.com/lOFpLeO.jpg");
+        Item sprite2 = new Item("Sprite Soda", "Caffeine Free Soft Drink", 1.99, tjs_id, "https://i.imgur.com/lOFpLeO.jpg");
+        Item sprite3 = new Item("Sprite Soda", "Colorless Lemon Drink", 2.09, f4l_id, "https://i.imgur.com/lOFpLeO.jpg");
         addItem(sprite);
         addItem(sprite2);
         addItem(sprite3);
-        Item onion = new Item("Onion", "Used for flavoring foods", 2.99, wf_id, "https://imgur.com/a/TAnEL");
-        Item onion2 = new Item("Onion", "Vegetable for adding flavor to dishes", 2.19, cf_id, "https://imgur.com/a/TAnEL");
-        Item onion3 = new Item("Onion", "Sweet Yellow Onion", 2.99, vons_id, "https://imgur.com/a/TAnEL");
+        Item onion = new Item("Onion", "Used for flavoring foods", 2.99, wf_id, "https://i.imgur.com/lu8nJVP.jpg");
+        Item onion2 = new Item("Onion", "Vegetable for adding flavor to dishes", 2.19, cf_id, "https://i.imgur.com/lu8nJVP.jpg");
+        Item onion3 = new Item("Onion", "Sweet Yellow Onion", 2.99, vons_id, "https://i.imgur.com/lu8nJVP.jpg");
         addItem(onion);
         addItem(onion2);
         addItem(onion3);
-        Item grapes = new Item("Grapes", "Green seedless Grapes", 2.99, ralphs_id, "https://imgur.com/a/ORP08");
-        Item grapes2 = new Item("Grapes", "Pulpy seedless Grapes", 3.49, cf_id, "https://imgur.com/a/ORP08");
+        Item grapes = new Item("Grapes", "Green seedless Grapes", 2.99, ralphs_id, "https://i.imgur.com/QoklVyp.jpg");
+        Item grapes2 = new Item("Grapes", "Pulpy seedless Grapes", 3.49, cf_id, "https://i.imgur.com/QoklVyp.jpg");
         Item grapes3 = new Item("Grapes", "Black seedless Grapes", 3.99, wf_id, "https://imgur.com/a/DiLlX");
         addItem(grapes);
         addItem(grapes2);
         addItem(grapes3);
-        Item m_ms = new Item("M&M's Candy Single Size","Peanut Chocolate", 1.29, sfid, "https://imgur.com/a/XPYkC");
-        Item m_ms2 = new Item("M&M's Candy Single Size","Milk Chocolate Candy", 1.49, tjs_id, "https://imgur.com/a/XRsm2");
-        Item m_ms3 = new Item("M&M's Candy Single Size","Chocolate that melts in your mouth", 1.49, ralphs_id, "https://imgur.com/a/XRsm2");
+        Item m_ms = new Item("M&M's Candy Single Size","Peanut Chocolate", 1.29, sfid, "https://i.imgur.com/WqDs9AG.jpg");
+        Item m_ms2 = new Item("M&M's Candy Single Size","Milk Chocolate Candy", 1.49, tjs_id, "https://i.imgur.com/WqDs9AG.jpg");
+        Item m_ms3 = new Item("M&M's Candy Single Size","Chocolate that melts in your mouth", 1.49, ralphs_id, "https://i.imgur.com/WqDs9AG.jpg");
         addItem(m_ms);
         addItem(m_ms2);
         addItem(m_ms3);
-        Item gatorade = new Item("Gatorade", "Gives you energy to perform", 1.29, wf_id, "https://imgur.com/a/Y6sdU");
-        Item gatorade2 = new Item("Gatorade", "Brings out your best", 1.49, sfid, "https://imgur.com/a/Y6sdU");
-        Item gatorade3 = new Item("Gatorade", "No excuses to not try", 0.99, ralphs_id, "https://imgur.com/a/Y6sdU");
+        Item gatorade = new Item("Gatorade", "Gives you energy to perform", 1.29, wf_id, "https://i.imgur.com/J8S3X8o.jpg");
+        Item gatorade2 = new Item("Gatorade", "Brings out your best", 1.49, sfid, "https://i.imgur.com/J8S3X8o.jpg");
+        Item gatorade3 = new Item("Gatorade", "No excuses to not try", 0.99, ralphs_id, "https://i.imgur.com/J8S3X8o.jpg");
         addItem(gatorade);
         addItem(gatorade2);
         addItem(gatorade3);
-        Item water = new Item("Crystal Geyser Spring Water", "Best Tasting water out there", 0.99,costco_id,"https://imgur.com/a/6OOTZ" );
-        Item water2 = new Item("Crystal Geyser Spring Water", "Capturing natural springs", 1.29,tjs_id,"https://imgur.com/a/6OOTZ" );
-        Item water3 = new Item("Crystal Geyser Spring Water", "Natural Tasting water", 0.89,sfid,"https://imgur.com/a/6OOTZ" );
+        Item water = new Item("Crystal Geyser Spring Water", "Best Tasting water out there", 0.99,costco_id,"https://i.imgur.com/gestSH3.jpg" );
+        Item water2 = new Item("Crystal Geyser Spring Water", "Capturing natural springs", 1.29,tjs_id,"https://i.imgur.com/gestSH3.jpg" );
+        Item water3 = new Item("Crystal Geyser Spring Water", "Natural Tasting water", 0.89,sfid,"https://i.imgur.com/gestSH3.jpg" );
         addItem(water);
         addItem(water2);
         addItem(water3);
-        Item ritz = new Item("Ritz Crackers", "Crackers in fun flavors", 2.59, ralphs_id, " https://imgur.com/a/1FZHS");
-        Item ritz2 = new Item("Ritz Crackers", "Salted Crackers", 2.99, sfid, " https://imgur.com/a/1FZHS");
-        Item ritz3 = new Item("Ritz Crackers", "Salted and Buttery Snacks", 2.19, vons_id, " https://imgur.com/a/1FZHS");
+        Item ritz = new Item("Ritz Crackers", "Crackers in fun flavors", 2.59, ralphs_id, "https://i.imgur.com/od9a1XW.jpg");
+        Item ritz2 = new Item("Ritz Crackers", "Salted Crackers", 2.99, sfid, "https://i.imgur.com/od9a1XW.jpg");
+        Item ritz3 = new Item("Ritz Crackers", "Salted and Buttery Snacks", 2.19, vons_id, "https://i.imgur.com/od9a1XW.jpg");
         addItem(ritz);
         addItem(ritz2);
         addItem(ritz3);
-        Item orangeJuice = new Item("Tropicana Orange Juice", "100% Natural Juice", 2.69, vons_id, "https://imgur.com/a/zueu8");
-        Item orangeJuice2 = new Item("Tropicana Orange Juice", "Squeezed from Fresh Oranges", 2.99, wf_id, "https://imgur.com/a/zueu8");
-        Item orangeJuice3 = new Item("Tropicana Orange Juice", "Pure Premium Orange Pulp", 3.49, tjs_id, "https://imgur.com/a/zueu8");
+        Item orangeJuice = new Item("Tropicana Orange Juice", "100% Natural Juice", 2.69, vons_id, "https://i.imgur.com/09yDPsO.jpg");
+        Item orangeJuice2 = new Item("Tropicana Orange Juice", "Squeezed from Fresh Oranges", 2.99, wf_id, "https://i.imgur.com/09yDPsO.jpg");
+        Item orangeJuice3 = new Item("Tropicana Orange Juice", "Pure Premium Orange Pulp", 3.49, tjs_id, "https://i.imgur.com/09yDPsO.jpg");
         addItem(orangeJuice);
         addItem(orangeJuice2);
         addItem(orangeJuice3);
 
-
         //TODO: jaz add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: kyle add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
-        //TODO: abbinav add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: jordan add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
         //TODO: mitchell add 30 products (10 unique), 3 per store, comment your name above so we know whos is whos
 

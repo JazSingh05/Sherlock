@@ -16,8 +16,10 @@ import com.example.android.sherlock.R;
 import com.example.android.sherlock.model.Store;
 
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,8 +36,11 @@ public class SearchResultActivity extends AppCompatActivity {
     private RecyclerAdapter adapter;
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
+    private List<Item> items;
     private Comparator<Item> priceCompare;
     private Comparator<Item> distanceCompare;
+    private Map<Long, Double> distanceMap = new HashMap<>();
+    private Map<Long, Store> storeMap;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,14 +52,18 @@ public class SearchResultActivity extends AppCompatActivity {
         try {
             String query = bundle.getString("SEARCH_TERM");
             Database db = new Database(this);
-            List<Item> items = db.searchItems(query);
-            Map<Long, Store> storeMap = db.getStoresAsMapById();
-            adapter = new RecyclerAdapter(this, items, storeMap);
-            this.priceCompare = new PriceComparator();
-            this.distanceCompare = new DistanceComparator(adapter.getDistanceMap());
+            items = db.searchItems(query);
+            storeMap = db.getStoresAsMapById();
+
         }catch (NullPointerException e) {
             Log.e(TAG, e.getMessage());
         }
+        Random r = new Random();
+        for(Long l: storeMap.keySet())
+            distanceMap.put(l, r.nextDouble()*10);
+        this.priceCompare = new PriceComparator();
+        this.distanceCompare = new DistanceComparator(distanceMap);
+        adapter = new RecyclerAdapter(this, items, storeMap, priceCompare, distanceMap);
     }
 
     @Override
@@ -65,23 +74,26 @@ public class SearchResultActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 int pos = tabLayout.getSelectedTabPosition();
-                if(pos == 0) adapter.sort(priceCompare);
-                else adapter.sort(distanceCompare);
+                RecyclerAdapter adapt;
+                if(pos == 0) {
+                    adapt = new RecyclerAdapter(SearchResultActivity.this, items, storeMap, priceCompare, distanceMap);
+                } else {
+                    adapt = new RecyclerAdapter(SearchResultActivity.this, items, storeMap, distanceCompare, distanceMap);
+                }
+                recycler.setAdapter(adapt);
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
+                //not implemented
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                //not implemented
             }
         });
+        recycler.setAdapter(adapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
-        recycler.setAdapter(adapter);
     }
 
     private class PriceComparator implements Comparator<Item> {
@@ -102,7 +114,7 @@ public class SearchResultActivity extends AppCompatActivity {
 
         @Override
         public int compare(Item o1, Item o2) {
-            double delta = distanceMap.get(o1.getId()) - distanceMap.get(o2.getId());
+            double delta = distanceMap.get(o1.getStoreId()) - distanceMap.get(o2.getStoreId());
             if (delta < 0) return -1;
             if (delta > 0) return 1;
             return 0;

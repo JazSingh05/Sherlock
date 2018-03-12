@@ -16,6 +16,7 @@ import com.example.android.sherlock.model.Store;
 import com.squareup.picasso.Picasso;
 
 import java.text.NumberFormat;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -63,6 +64,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
             distanceMap.put(l, r.nextDouble()*10);
     }
 
+
+
     @NonNull
     @Override
     public SherlockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -88,5 +91,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
     @Override
     public int getItemCount() {
         return this.itemData.size();
+    }
+
+    public void sort(Comparator<Item> comparator) {
+        this.itemData.sort(comparator);
+    }
+
+    public Map<Long, Double> getDistanceMap() {
+        return this.distanceMap;
     }
 }

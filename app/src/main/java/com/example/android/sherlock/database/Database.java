@@ -937,6 +937,15 @@ public class Database extends SQLiteOpenHelper {
         addItem(justice);
         addItem(justice2);
         addItem(justice3);
+        final String HP = "Hewlet Packard Enterprises";
+        final String HP_URL = "https://i.imgur.com/tkqNF6L.jpg";
+        final String HPDES = "The Entire Corporation of HP";
+        Item hp = new Item(HP, HPDES, 50000.00, tarId, HP_URL);
+        Item hp2 = new Item(HP, HPDES, 100000.00, costcoId, HP_URL);
+        Item hp3 = new Item(HP, HPDES, 49999.99, wfId, HP_URL);
+        addItem(hp);
+        addItem(hp2);
+        addItem(hp3);
         final String KONG = "Kong: Skull Island 4K Blu-ray";
         final String KONG_URL = "https://i.imgur.com/mrEa8XA.jpg";
         final String KONGDES = "4K Ultra HD Blu-ray Kong: Skull Island";

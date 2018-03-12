@@ -1,12 +1,13 @@
 package com.example.android.sherlock.activity;
 
-import android.app.Activity;
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,7 +25,8 @@ import butterknife.ButterKnife;
  * Created by abbin_j19pde on 1/24/2018.
  */
 
-public class SearchActivity extends Activity {
+public class SearchActivity extends AppCompatActivity {
+    private static final String TAG = "SearchActivity";
     @BindView(R.id.searchBar)
     TextView searchBar;
     @BindView(R.id.searchButton)
@@ -40,6 +42,16 @@ public class SearchActivity extends Activity {
                 searchDatabase();
             }
         });
+        try {
+            ActionBar ab = getActionBar();
+            if(ab != null) {
+                ab.show();
+            }else {
+                Log.d(TAG, "No action bar");
+            }
+        }catch (NullPointerException npe) {
+            Log.e(TAG, npe.getMessage());
+        }
     }
 
     @Override

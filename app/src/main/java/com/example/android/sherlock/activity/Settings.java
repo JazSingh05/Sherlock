@@ -1,9 +1,9 @@
 package com.example.android.sherlock.activity;
 
-import android.app.Activity;
 import android.content.IntentSender;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -25,7 +25,7 @@ import com.google.android.gms.tasks.Task;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Settings extends Activity {
+public class Settings extends AppCompatActivity {
     private static final String TAG = "Settings";
     @BindView(R.id.radiusSeekbar)
     SeekBar seekBar;

@@ -1,8 +1,8 @@
 package com.example.android.sherlock.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 
 
 //lets go travis
-public class SplashScreen extends Activity {
+public class SplashScreen extends AppCompatActivity {
     private static final String TAG = "SplashScreenActivity";
     //This is how you bind a view in XML to a global var in the class
     @BindView(R.id.logo)
@@ -46,7 +46,7 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         try {
-            getActionBar().hide();
+            getSupportActionBar().hide();
         }catch(NullPointerException npe) {
             Log.e(TAG, npe.getMessage());
         }

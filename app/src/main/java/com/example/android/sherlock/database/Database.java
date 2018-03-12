@@ -428,7 +428,7 @@ public class Database extends SQLiteOpenHelper {
         addItem(avocado);
         addItem(avocado2);
         addItem(avocado3);
-        final String SOAP = "DOVE SOAP";
+        final String SOAP = "Dove Soap";
         final String SOAP_URL = "https://i.imgur.com/970zlri.jpg";
         Item soap = new Item(SOAP, "take nice soapy baths with it", 8.59, tjsId, SOAP_URL);
         Item soap2 = new Item(SOAP, "disinfects body", 8.59, sfId, SOAP_URL);

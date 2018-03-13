@@ -1239,6 +1239,10 @@ public class Database extends SQLiteOpenHelper {
         addItem(swiffer);
         addItem(swiffer2);
         addItem(swiffer3);
+
+        
+
+
     }
 
     private long addStore(Store store){

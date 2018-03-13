@@ -62,6 +62,8 @@ public class Store {
         return s.getStoreName().equals(s.getStoreName()) && s.getAddress().equals(s.getAddress());
     }
 
+
+
     @Override
     public int hashCode(){
         return super.hashCode();

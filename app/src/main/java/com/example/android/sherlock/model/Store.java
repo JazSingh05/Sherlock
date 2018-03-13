@@ -59,7 +59,7 @@ public class Store {
     public boolean equals(Object o) {
         if(!(o instanceof Store)) return false;
         Store s = (Store) o;
-        return s.getStoreName().equals(((Store) o).getStoreName()) && s.getAddress().equals(((Store) o).getAddress());
+        return s.getStoreName().equals(s.getStoreName()) && s.getAddress().equals(s.getAddress());
     }
 
     @Override

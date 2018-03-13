@@ -1086,7 +1086,19 @@ public class Database extends SQLiteOpenHelper {
         cursor.close();
         return items;
     }
-
+    public int getItemsCount() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_ITEMS, I_PROJ, null, null, null, null, PRODUCT_NAME);
+        ArrayList<Item> items = new ArrayList<>(cursor.getCount());
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            items.add( new Item(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getDouble(3),
+                    cursor.getInt(4), cursor.getString(5)));
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return items.size();
+    }
     private Map<String, Store> getStoresAsMapByName() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_STORES, S_PROJ, null, null, null, null, NAME);
@@ -1101,6 +1113,22 @@ public class Database extends SQLiteOpenHelper {
         return stores;
     }
 
+    public int storeCount() {
+        int store_count = 0;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_STORES, S_PROJ, null, null, null, null, NAME);
+        HashMap<String, Store> stores = new HashMap<>(cursor.getCount());
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            String name = cursor.getString(1);
+            stores.put(name, new Store(cursor.getLong(0), cursor.getString(1), cursor.getString(2)));
+            cursor.moveToNext();
+            store_count ++;
+        }
+        cursor.close();
+        return store_count-1;
+    }
+
     public Map<Long, Store> getStoresAsMapById() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_STORES, S_PROJ, null, null, null, null, NAME);
@@ -1113,6 +1141,22 @@ public class Database extends SQLiteOpenHelper {
         }
         cursor.close();
         return stores;
+    }
+
+    public int storeIdCount() {
+        int id_count = 0;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_STORES, S_PROJ, null, null, null, null, NAME);
+        HashMap<Long, Store> stores = new HashMap<>(cursor.getCount());
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            Long id = cursor.getLong(0);
+            stores.put(id, new Store(cursor.getLong(0), cursor.getString(1), cursor.getString(2)));
+            cursor.moveToNext();
+            id_count ++;
+        }
+        cursor.close();
+        return id_count - 1;
     }
 
     public Map<String, Item> getItemsAsMapByName() {
@@ -1143,7 +1187,7 @@ public class Database extends SQLiteOpenHelper {
         cursor.close();
         return items;
     }
-
+    //loop test 4
     public List<Store> searchStores(String term) {
         String sTerm = term.toLowerCase();
         ArrayList<Store> stores = new ArrayList<>();
@@ -1156,7 +1200,7 @@ public class Database extends SQLiteOpenHelper {
         }
         return stores;
     }
-
+    //loop test 5
     public List<Item> searchItems(String term) {
         String sTerm = term.toLowerCase();
         ArrayList<Item> results = new ArrayList<>();
@@ -1170,7 +1214,7 @@ public class Database extends SQLiteOpenHelper {
         }
         return results;
     }
-
+    //loop test 6
     private boolean descContains(String term, String desc) {
         String[] descWords = desc.split(" ");
         for(String word: descWords) {

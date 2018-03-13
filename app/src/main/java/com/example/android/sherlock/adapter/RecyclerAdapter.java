@@ -18,7 +18,6 @@ import com.squareup.picasso.Picasso;
 import java.text.NumberFormat;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -72,7 +71,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
         return new SherlockViewHolder(v);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(@NonNull SherlockViewHolder holder, int position) {
         Item i = itemData.get(position);

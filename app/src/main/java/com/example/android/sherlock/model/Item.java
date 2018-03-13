@@ -83,4 +83,15 @@ public class Item {
     public String toString() {
         return String.format(Locale.US, "Item %d:| %s | %s | $%f | %d | %s |", id, name, description, price, storeId, imageUrl);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if(o instanceof Item) {
+            Item i = (Item) o;
+            return this.price.equals(i.getPrice()) && this.imageUrl.equals(i.getImageUrl()) && (this.storeId == i.getStoreId()) &&
+                    this.name.equals(i.getName());
+        } else {
+            return false;
+        }
+    }
 }

@@ -16,7 +16,7 @@ import java.util.List;
  * Created by ${Abbinav} on 3/12/2018.
  */
 
-public class DatabaseTest {
+public class SearchItemsTest {
     @Test
     public void TestSearchitems() {
         Database db;
@@ -25,6 +25,16 @@ public class DatabaseTest {
         Item banana = new Item(BANANA, "Tasty yellow fruit that monkeys like", 1.59, 1, "https://i.imgur.com/WWxI0Pq.jpg" );
         List<Item> list = db.searchItems(BANANA);
         Log.i("TESTFUNCTION1", String.valueOf(list));
-        assertEquals(true, list.contains(banana));
+        assertEquals(true, list.get(0).equals(banana));
+    }
+    @Test
+    public void TestSearchItems1(){
+        Database db;
+        db = new Database(getTargetContext());
+        String LEMON = "Lemon";
+        Item lemon = new Item(LEMON, "Sour yellow fruit used for beverages", 0.79, 4, "https://i.imgur.com/sk2Q0Se.jpg" );
+        List<Item> list = db.searchItems(LEMON);
+        Log.i("TESTFUNCTION1", String.valueOf(list));
+        assertEquals(true, list.get(0).equals(lemon));
     }
 }

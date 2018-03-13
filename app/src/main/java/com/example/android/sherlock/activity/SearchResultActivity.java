@@ -7,17 +7,20 @@ import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.TextView;
 
+import com.example.android.sherlock.R;
 import com.example.android.sherlock.adapter.RecyclerAdapter;
 import com.example.android.sherlock.database.Database;
 import com.example.android.sherlock.model.Item;
-import com.example.android.sherlock.R;
 import com.example.android.sherlock.model.Store;
 
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 
@@ -28,7 +31,7 @@ import butterknife.ButterKnife;
  * Created by abbin_j19pde and stephen on 1/24/2018.
  */
 
-public class SearchResultActivity extends AppCompatActivity {
+public class SearchResultActivity extends AppCompatActivity implements RecyclerAdapter.CartListener {
     private static final String TAG = "SearchResultActivity";
 
     @BindView(R.id.recyclerView)
@@ -41,6 +44,7 @@ public class SearchResultActivity extends AppCompatActivity {
     private Comparator<Item> distanceCompare;
     private Map<Long, Double> distanceMap = new HashMap<>();
     private Map<Long, Store> storeMap;
+    private TextView cartCount;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +52,9 @@ public class SearchResultActivity extends AppCompatActivity {
         setContentView(R.layout.database_search);
         Intent in = getIntent();
         Bundle bundle = in.getExtras();
-
+        Toolbar tb = findViewById(R.id.toolbar);
+        cartCount = tb.findViewById(R.id.cartCount);
+        setSupportActionBar(tb);
         try {
             String query = bundle.getString("SEARCH_TERM");
             Database db = new Database(this);
@@ -63,7 +69,7 @@ public class SearchResultActivity extends AppCompatActivity {
             distanceMap.put(l, r.nextDouble()*10);
         this.priceCompare = new PriceComparator();
         this.distanceCompare = new DistanceComparator(distanceMap);
-        adapter = new RecyclerAdapter(this, items, storeMap, priceCompare, distanceMap);
+        adapter = new RecyclerAdapter(this, items, storeMap, priceCompare, distanceMap, null);
     }
 
     @Override
@@ -74,11 +80,12 @@ public class SearchResultActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 int pos = tabLayout.getSelectedTabPosition();
+                RecyclerAdapter oldAdapter = (RecyclerAdapter) recycler.getAdapter();
                 RecyclerAdapter adapt;
                 if(pos == 0) {
-                    adapt = new RecyclerAdapter(SearchResultActivity.this, items, storeMap, priceCompare, distanceMap);
+                    adapt = new RecyclerAdapter(SearchResultActivity.this, items, storeMap, priceCompare, distanceMap, oldAdapter.getCartContents());
                 } else {
-                    adapt = new RecyclerAdapter(SearchResultActivity.this, items, storeMap, distanceCompare, distanceMap);
+                    adapt = new RecyclerAdapter(SearchResultActivity.this, items, storeMap, distanceCompare, distanceMap, oldAdapter.getCartContents());
                 }
                 recycler.setAdapter(adapt);
             }
@@ -121,5 +128,9 @@ public class SearchResultActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    public void onItemAddToCart() {
+        int count = ((RecyclerAdapter) recycler.getAdapter()).getCartContents().size();
+        this.cartCount.setText(String.format(Locale.US, "%d", count));
+    }
 }

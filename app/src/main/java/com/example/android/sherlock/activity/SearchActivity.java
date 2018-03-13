@@ -9,8 +9,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -31,6 +29,9 @@ public class SearchActivity extends AppCompatActivity {
     TextView searchBar;
     @BindView(R.id.searchButton)
     ImageButton searchButton;
+    @BindView(R.id.settingsButton)
+    ImageButton settingsButton;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,14 @@ public class SearchActivity extends AppCompatActivity {
         }catch (NullPointerException npe) {
             Log.e(TAG, npe.getMessage());
         }
+
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchActivity.this, Settings.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -59,8 +68,8 @@ public class SearchActivity extends AppCompatActivity {
         super.onStart();
         searchButton.setColorFilter(new PorterDuffColorFilter(ContextCompat.getColor(this, R.color.colorPrimary), PorterDuff.Mode.MULTIPLY));
     }
-    public void searchDatabase()
-    {
+
+    public void searchDatabase() {
         if(!searchBar.getText().toString().matches("") || searchBar.getText().toString().matches("")) {
             String databaseSearch = searchBar.getText().toString();
             Log.d("CHECKING STRING", "The string you entered: " + databaseSearch);
@@ -72,25 +81,5 @@ public class SearchActivity extends AppCompatActivity {
         {
             Toast.makeText(this, "Enter in Something", Toast.LENGTH_SHORT).show();
         }
-
-
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.settings) {
-            Intent intent = new Intent(this, Settings.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 }

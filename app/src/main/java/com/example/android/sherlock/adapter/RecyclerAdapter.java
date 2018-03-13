@@ -16,11 +16,12 @@ import com.example.android.sherlock.model.Store;
 import com.squareup.picasso.Picasso;
 
 import java.text.NumberFormat;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * Created by stephen on 3/7/18.
@@ -30,7 +31,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
     private Map<Long, Store> storeMap;
     private Context c;
     private NumberFormat formatter = NumberFormat.getCurrencyInstance();
-    private Map<Long, Double> distanceMap = new HashMap<>();
+    private Map<Long, Double> distanceMap;
 
 
     static class SherlockViewHolder extends RecyclerView.ViewHolder {
@@ -54,14 +55,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
         }
     }
 
-    public RecyclerAdapter(Context c, List<Item> itemData, Map<Long, Store> storeMap) {
+    public RecyclerAdapter(Context c, List<Item> itemData, Map<Long, Store> storeMap, Comparator<Item> comparator, Map<Long, Double> distanceMap) {
         this.itemData = itemData;
+        Collections.sort(this.itemData, comparator);
+        this.distanceMap = distanceMap;
         this.storeMap = storeMap;
         this.c = c;
-        Random r = new Random();
-        for(Long l: storeMap.keySet())
-            distanceMap.put(l, r.nextDouble()*10);
     }
+
+
 
     @NonNull
     @Override
@@ -88,5 +90,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
     @Override
     public int getItemCount() {
         return this.itemData.size();
+    }
+
+    public void sort(Comparator<Item> comparator) {
+        this.itemData.sort(comparator);
+    }
+
+    public Map<Long, Double> getDistanceMap() {
+        return this.distanceMap;
     }
 }

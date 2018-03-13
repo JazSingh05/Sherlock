@@ -4,19 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 
+import com.example.android.sherlock.R;
 import com.example.android.sherlock.adapter.RecyclerAdapter;
 import com.example.android.sherlock.database.Database;
 import com.example.android.sherlock.model.Item;
-import com.example.android.sherlock.R;
 import com.example.android.sherlock.model.Store;
 
 import java.util.Comparator;
@@ -46,7 +44,6 @@ public class SearchResultActivity extends AppCompatActivity implements RecyclerA
     private Comparator<Item> distanceCompare;
     private Map<Long, Double> distanceMap = new HashMap<>();
     private Map<Long, Store> storeMap;
-    private Toolbar tb;
     private TextView cartCount;
 
     @Override
@@ -55,7 +52,7 @@ public class SearchResultActivity extends AppCompatActivity implements RecyclerA
         setContentView(R.layout.database_search);
         Intent in = getIntent();
         Bundle bundle = in.getExtras();
-        this.tb = findViewById(R.id.toolbar);
+        Toolbar tb = findViewById(R.id.toolbar);
         cartCount = tb.findViewById(R.id.cartCount);
         setSupportActionBar(tb);
         try {

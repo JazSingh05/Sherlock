@@ -11,14 +11,12 @@ import static junit.framework.Assert.assertEquals;
  */
 
 public class ItemTestStoreId {
-
     @Test
     public void TestItemStoreId1() {
         Item myItem = new Item();
         myItem.setStoreId(1);
         assertEquals(1, myItem.getStoreId());
     }
-
     @Test
     public void TestItemStoreId2() {
         Item myItem = new Item();

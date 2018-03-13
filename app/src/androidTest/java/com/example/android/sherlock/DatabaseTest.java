@@ -23,14 +23,8 @@ public class DatabaseTest {
         db = new Database(getTargetContext());
         String BANANA = "Banana";
         Item banana = new Item(BANANA, "Tasty yellow fruit that monkeys like", 1.59, 1, "https://i.imgur.com/WWxI0Pq.jpg" );
-
-
         List<Item> list = db.searchItems(BANANA);
         Log.i("TESTFUNCTION1", String.valueOf(list));
-
         assertEquals(true, list.contains(banana));
-
-
     }
-
 }

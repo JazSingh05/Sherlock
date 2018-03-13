@@ -12,7 +12,6 @@ import static junit.framework.Assert.assertEquals;
  */
 
 public class ItemTestImageUrl {
-
     @Test
     public void TestItemUrl1() {
         Item item = new Item();

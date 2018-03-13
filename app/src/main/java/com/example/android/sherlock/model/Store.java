@@ -54,6 +54,18 @@ public class Store {
     public String toString() {
         return String.format(Locale.US, "Store %d: %s %s", id, storeName, address);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof Store)) return false;
+        Store s = (Store) o;
+        return s.getStoreName().equals(((Store) o).getStoreName()) && s.getAddress().equals(((Store) o).getAddress());
+    }
+
+    @Override
+    public int hashCode(){
+        return super.hashCode();
+    }
 }
 
 

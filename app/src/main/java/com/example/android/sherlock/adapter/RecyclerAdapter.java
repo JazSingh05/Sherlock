@@ -62,8 +62,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Sherlo
         this.c = c;
     }
 
-
-
     @NonNull
     @Override
     public SherlockViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

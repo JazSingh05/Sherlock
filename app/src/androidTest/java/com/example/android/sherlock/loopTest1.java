@@ -11,6 +11,6 @@ public class loopTest1 {
     public void loop_test1() {
         Database db = new Database(getTargetContext());
         int total = db.getItemsCount();
-        assertEquals(183, total);
+        assertEquals(925, total);
     }
 }

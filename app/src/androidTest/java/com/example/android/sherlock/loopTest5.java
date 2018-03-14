@@ -3,7 +3,7 @@ import com.example.android.sherlock.database.Database;
 import com.example.android.sherlock.model.Item;
 import com.example.android.sherlock.model.Store;
 import org.junit.Test;
-import java.util.List
+import java.util.List;
 import static android.support.test.InstrumentationRegistry.getTargetContext;
 import static junit.framework.Assert.assertEquals;
 /**

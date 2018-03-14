@@ -1,10 +1,10 @@
 package com.example.android.sherlock.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -31,7 +31,7 @@ import butterknife.ButterKnife;
  * Created by abbin_j19pde and stephen on 1/24/2018.
  */
 
-public class SearchResultActivity extends AppCompatActivity implements RecyclerAdapter.CartListener {
+public class SearchResultActivity extends Activity implements RecyclerAdapter.CartListener {
     private static final String TAG = "SearchResultActivity";
 
     @BindView(R.id.recyclerView)
@@ -54,7 +54,7 @@ public class SearchResultActivity extends AppCompatActivity implements RecyclerA
         Bundle bundle = in.getExtras();
         Toolbar tb = findViewById(R.id.toolbar);
         cartCount = tb.findViewById(R.id.cartCount);
-        setSupportActionBar(tb);
+        //setSupportActionBar(tb);
         try {
             String query = bundle.getString("SEARCH_TERM");
             Database db = new Database(this);

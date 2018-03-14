@@ -1,13 +1,13 @@
 package com.example.android.sherlock.activity;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
  * Created by abbin_j19pde on 1/24/2018.
  */
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends Activity {
     private static final String TAG = "SearchActivity";
     @BindView(R.id.searchBar)
     TextView searchBar;

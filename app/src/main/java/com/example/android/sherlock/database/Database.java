@@ -2425,7 +2425,7 @@ public class Database extends SQLiteOpenHelper {
         addItem(mkx2);
         addItem(mkx3);
         final String DES = "Destiny 2";
-        final String DES_URL = "https://i.imgur.com/XjJwUQr.jpg";
+        final String DES_URL = "https://i.imgur.com/bZ0ssWl.jpg";
         final String DES_DES = "a game where you look for the light";
         Item des = new Item(DES, DES_DES , 49.99, tarId, DES_URL);
         Item des2 = new Item(DES, DES_DES , 49.99, costcoId, DES_URL);
@@ -2470,7 +2470,7 @@ public class Database extends SQLiteOpenHelper {
         addItem(smo2);
         addItem(smo3);
         final String KART = "Mario Kart 8 Deluxe";
-        final String KART_URL = "https://i.imgur.com/XjJwUQr.jpg";
+        final String KART_URL = "https://i.imgur.com/OYQSFxz.jpg";
         final String KART_DES = "a game where you are mario and race karts";
         Item kart = new Item(KART, KART_DES , 59.99, tarId, KART_URL);
         Item kart2 = new Item(KART, KART_DES , 59.99, costcoId, KART_URL);
@@ -2479,7 +2479,7 @@ public class Database extends SQLiteOpenHelper {
         addItem(kart2);
         addItem(kart3);
         final String SPLA = "Splatoon 2";
-        final String SPLA_URL = "https://i.imgur.com/XjJwUQr.jpg";
+        final String SPLA_URL = "https://i.imgur.com/9tYyZg7.jpg";
         final String SPLA_DES = "a game where you splurge paint on each other";
         Item spla = new Item(SPLA, SPLA_DES , 59.99, tarId, SPLA_URL);
         Item spla2 = new Item(SPLA, SPLA_DES , 59.99, costcoId, SPLA_URL);
@@ -2505,6 +2505,177 @@ public class Database extends SQLiteOpenHelper {
         addItem(xeno);
         addItem(xeno2);
         addItem(xeno3);
+        final String DX = "Pokken Tournament DX";
+        final String DX_URL = "https://i.imgur.com/wzBZ44P.jpg";
+        final String DX_DES = "a game where fight with pokemon";
+        Item dx = new Item(DX, DX_DES , 59.99, tarId, DX_URL);
+        Item dx2 = new Item(DX, DX_DES , 59.99, costcoId, DX_URL);
+        Item dx3 = new Item(XENO, DX_DES, 59.99, bbId, DX_URL);
+        addItem(dx);
+        addItem(dx2);
+        addItem(dx3);
+        final String SKY = "The Elder Scrolls V: Skyrim";
+        final String SKY_URL = "https://i.imgur.com/evrDqsp.jpg";
+        final String SKY_DES = "a game where you explore an open world";
+        Item sky = new Item(SKY, SKY_DES , 59.99, tarId, SKY_URL);
+        Item sky2 = new Item(SKY, SKY_DES , 59.99, costcoId, SKY_URL);
+        Item sky3 = new Item(SKY, SKY_DES, 59.99, bbId, SKY_URL);
+        addItem(sky);
+        addItem(sky2);
+        addItem(sky3);
+        final String ARMS = "Arms";
+        final String ARMS_URL = "https://i.imgur.com/zEwt4CU.jpg";
+        final String ARMS_DES = "a game where you have arms";
+        Item arms = new Item(ARMS, ARMS_DES , 59.99, tarId, ARMS_URL);
+        Item arms2 = new Item(ARMS, ARMS_DES , 59.99, costcoId, ARMS_URL);
+        Item arms3 = new Item(ARMS, ARMS_DES, 59.99, bbId, ARMS_URL);
+        addItem(arms);
+        addItem(arms2);
+        addItem(arms3);
+        final String DQB = "Dragon Quest Builders";
+        final String DQB_URL = "https://i.imgur.com/nb5gn0X.jpg";
+        final String DQB_DES = "a game where you have dragons and builders";
+        Item dqb = new Item(DQB, DQB_DES , 49.99, tarId, DQB_URL);
+        Item dqb2 = new Item(DQB, DQB_DES , 49.99, costcoId, DQB_URL);
+        Item dqb3 = new Item(DQB, DQB_DES, 49.99, bbId, DQB_URL);
+        addItem(dqb);
+        addItem(dqb2);
+        addItem(dqb3);
+        final String DAN = "Just Dance 2018";
+        final String DAN_URL = "https://i.imgur.com/iWRwklZ.jpg";
+        final String DAN_DES = "a game where you just dance";
+        Item dan = new Item(DAN, DAN_DES , 59.99, tarId, DAN_URL);
+        Item dan2 = new Item(DAN, DAN_DES , 59.99, costcoId, DAN_URL);
+        Item dan3 = new Item(DAN, DAN_DES, 59.99, bbId, DAN_URL);
+        addItem(dan);
+        addItem(dan2);
+        addItem(dan3);
+        final String SWI = "1-2-Switch";
+        final String SWI_URL = "https://i.imgur.com/MTt2zYx.jpg";
+        final String SWI_DES = "a game where you just switch";
+        Item swi = new Item(SWI, SWI_DES , 49.99, tarId, SWI_URL);
+        Item swi2 = new Item(SWI, SWI_DES , 49.99, costcoId, SWI_URL);
+        Item swi3 = new Item(SWI, SWI_DES, 49.99, bbId, SWI_URL);
+        addItem(swi);
+        addItem(swi2);
+        addItem(swi3);
+        final String DOOM = "DOOM";
+        final String DOOM_URL = "https://i.imgur.com/xkcdLzL.png";
+        final String DOOM_DES = "a game where you are doomed";
+        Item doom = new Item(DOOM, DOOM_DES , 59.99, tarId, DOOM_URL);
+        Item doom2 = new Item(DOOM, DOOM_DES , 59.99, costcoId, DOOM_URL);
+        Item doom3 = new Item(DOOM, DOOM_DES, 59.99, bbId, DOOM_URL);
+        addItem(doom);
+        addItem(doom2);
+        addItem(doom3);
+        final String BOMB = "Super Bomberman R";
+        final String BOMB_URL = "https://i.imgur.com/ied3AEv.jpg";
+        final String BOMB_DES = "a game where you bomb";
+        Item bomb = new Item(BOMB, BOMB_DES , 39.99, tarId, BOMB_URL);
+        Item bomb2 = new Item(BOMB, BOMB_DES , 39.99, costcoId, BOMB_URL);
+        Item bomb3 = new Item(BOMB, BOMB_DES, 39.99, bbId, BOMB_URL);
+        addItem(bomb);
+        addItem(bomb2);
+        addItem(bomb3);
+        final String SCRI = "Scribblenauts Showdown";
+        final String SCRI_URL = "https://i.imgur.com/PIQtrCM.jpg";
+        final String SCRI_DES = "a game where you showdown";
+        Item scri = new Item(SCRI, SCRI_DES , 39.99, tarId, SCRI_URL);
+        Item scri2 = new Item(SCRI, SCRI_DES , 39.99, costcoId, SCRI_URL);
+        Item scri3 = new Item(SCRI, SCRI_DES, 39.99, bbId, SCRI_URL);
+        addItem(scri);
+        addItem(scri2);
+        addItem(scri3);
+        final String MONO = "Monopoly for Nintendo Switch";
+        final String MONO_URL = "https://i.imgur.com/Ki7yQdY.jpg";
+        final String MONO_DES = "a game where you play monopoly";
+        Item mono = new Item(MONO, MONO_DES , 39.99, tarId, MONO_URL);
+        Item mono2 = new Item(MONO, MONO_DES , 39.99, costcoId, MONO_URL);
+        Item mono3 = new Item(MONO, MONO_DES, 39.99, bbId, MONO_URL);
+        addItem(mono);
+        addItem(mono2);
+        addItem(mono3);
+        final String SON = "Sonic Forces Standard Edition";
+        final String SON_URL = "https://i.imgur.com/k8cY4JZ.jpg";
+        final String SON_DES = "a game where you play as a blue hedgehog";
+        Item son = new Item(SON, SON_DES , 39.99, tarId, SON_URL);
+        Item son2 = new Item(SON, SON_DES , 39.99, costcoId, SON_URL);
+        Item son3 = new Item(SON, SON_DES, 39.99, bbId, SON_URL);
+        addItem(son);
+        addItem(son2);
+        addItem(son3);
+        final String FIRE = "Fire Emblem";
+        final String FIRE_URL = "https://i.imgur.com/kLxkYzm.jpg";
+        final String FIRE_DES = "a game where you play a strategy in fire emblem";
+        Item fire = new Item(FIRE, FIRE_DES , 59.99, tarId, FIRE_URL);
+        Item fire2 = new Item(FIRE, FIRE_DES , 59.99, costcoId, FIRE_URL);
+        Item fire3 = new Item(FIRE, FIRE_DES, 59.99, bbId, FIRE_URL);
+        addItem(fire);
+        addItem(fire2);
+        addItem(fire3);
+        final String RAY = "Rayman Legends Definitive Edition";
+        final String RAY_URL = "https://i.imgur.com/mJPhhkh.jpg";
+        final String RAY_DES = "a game where you play a strategy in fire emblem";
+        Item ray = new Item(RAY, RAY_DES , 39.99, tarId, RAY_URL);
+        Item ray2 = new Item(RAY, RAY_DES , 39.99, costcoId, RAY_URL);
+        Item ray3 = new Item(RAY, RAY_DES, 39.99, bbId, RAY_URL);
+        addItem(ray);
+        addItem(ray2);
+        addItem(ray3);
+        final String FARM = "Farming Simulator";
+        final String FARM_URL = "https://i.imgur.com/aMY913S.jpg";
+        final String FARM_DES = "a game where you ride a tractor";
+        Item farm = new Item(FARM, FARM_DES , 39.99, tarId, FARM_URL);
+        Item farm2 = new Item(FARM, FARM_DES , 39.99, costcoId, FARM_URL);
+        Item farm3 = new Item(RAY, FARM_DES, 39.99, bbId, FARM_URL);
+        addItem(farm);
+        addItem(farm2);
+        addItem(farm3);
+        final String SOLD = "Soldam: Drop, Connect, Erase";
+        final String SOLD_URL = "https://i.imgur.com/LPp1awZ.jpg";
+        final String SOLD_DES = "a game where you drop, connect,erase";
+        Item sold = new Item(SOLD, SOLD_DES , 19.99, tarId, SOLD_URL);
+        Item sold2 = new Item(SOLD, SOLD_DES , 19.99, costcoId, SOLD_URL);
+        Item sold3 = new Item(SOLD, SOLD_DES, 19.99, bbId, SOLD_URL);
+        addItem(sold);
+        addItem(sold2);
+        addItem(sold3);
+        final String NIGH = "Nights of Azure 2: Bride of the New Moon";
+        final String NIGH_URL = "https://i.imgur.com/K7f3007.jpg";
+        final String NIGH_DES = "a game where you bride of the moon";
+        Item nigh = new Item(NIGH, NIGH_DES , 29.99, tarId,NIGH_URL);
+        Item nigh2 = new Item(NIGH, SOLD_DES , 29.99, costcoId, NIGH_URL);
+        Item nigh3 = new Item(NIGH, SOLD_DES, 29.99, bbId, NIGH_URL);
+        addItem(nigh);
+        addItem(nigh2);
+        addItem(nigh3);
+        final String AXI = "Axiom Verge: Multiverse Edition";
+        final String AXI_URL = "https://i.imgur.com/Kiz2TH7.jpg";
+        final String AXI_DES = "a game where you axiom verge";
+        Item axi = new Item(AXI, AXI_DES , 39.99, tarId,AXI_URL);
+        Item axi2 = new Item(AXI, AXI_DES , 39.99, costcoId, AXI_URL);
+        Item axi3 = new Item(AXI, AXI_DES, 39.99, bbId, AXI_URL);
+        addItem(axi);
+        addItem(axi2);
+        addItem(axi3);
+        final String CAR = "Cars 3: Driven to Win";
+        final String CAR_URL = "https://i.imgur.com/RJIKsK4.jpg";
+        final String CAR_DES = "a game where race a car";
+        Item car = new Item(CAR, CAR_DES , 39.99, tarId,CAR_URL);
+        Item car2 = new Item(CAR, CAR_DES , 39.99, costcoId, CAR_URL);
+        Item car3 = new Item(CAR, CAR_DES, 39.99, bbId, CAR_URL);
+        addItem(car);
+        addItem(car2);
+        addItem(car3);
+        final String MONS = "Monster Jam: Crush It!";
+        final String MONS_URL = "https://i.imgur.com/zxLXZc4.jpg";
+        final String MONS_DES = "a game where you are a monster truck";
+        Item mons = new Item(MONS, MONS_DES , 29.99, tarId,MONS_URL);
+        Item mons2 = new Item(MONS, MONS_DES , 29.99, costcoId, MONS_URL);
+        Item mons3 = new Item(MONS, MONS_DES, 29.99, bbId, MONS_URL);
+        addItem(mons);
+        addItem(mons2);
+        addItem(mons3);
         
 
 
@@ -2585,7 +2756,7 @@ public class Database extends SQLiteOpenHelper {
     }
 
     public int storeCount() {
-        int store_count = 0;
+        int storeCount = 0;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_STORES, S_PROJ, null, null, null, null, NAME);
         HashMap<String, Store> stores = new HashMap<>(cursor.getCount());
@@ -2594,10 +2765,10 @@ public class Database extends SQLiteOpenHelper {
             String name = cursor.getString(1);
             stores.put(name, new Store(cursor.getLong(0), cursor.getString(1), cursor.getString(2)));
             cursor.moveToNext();
-            store_count ++;
+            storeCount ++;
         }
         cursor.close();
-        return store_count-1;
+        return storeCount;
     }
 
     public Map<Long, Store> getStoresAsMapById() {
@@ -2615,7 +2786,7 @@ public class Database extends SQLiteOpenHelper {
     }
 
     public int storeIdCount() {
-        int id_count = 0;
+        int idCount = 0;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_STORES, S_PROJ, null, null, null, null, NAME);
         HashMap<Long, Store> stores = new HashMap<>(cursor.getCount());
@@ -2624,10 +2795,10 @@ public class Database extends SQLiteOpenHelper {
             Long id = cursor.getLong(0);
             stores.put(id, new Store(cursor.getLong(0), cursor.getString(1), cursor.getString(2)));
             cursor.moveToNext();
-            id_count ++;
+            idCount ++;
         }
         cursor.close();
-        return id_count - 1;
+        return idCount;
     }
 
     public Map<String, Item> getItemsAsMapByName() {

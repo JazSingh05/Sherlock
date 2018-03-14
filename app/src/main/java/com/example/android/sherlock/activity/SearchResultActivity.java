@@ -54,7 +54,6 @@ public class SearchResultActivity extends Activity implements RecyclerAdapter.Ca
         Bundle bundle = in.getExtras();
         Toolbar tb = findViewById(R.id.toolbar);
         cartCount = tb.findViewById(R.id.cartCount);
-        //setSupportActionBar(tb);
         try {
             String query = bundle.getString("SEARCH_TERM");
             Database db = new Database(this);
